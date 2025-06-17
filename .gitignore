@@ -1,0 +1,18 @@
+# Ignoruj složky s build výsledky
+[Bb]in/
+[Oo]bj/
+
+# Ignoruj VS/uživatelské soubory
+*.user
+*.suo
+*.sln.docstates
+
+# Ignoruj nastavení VS Code
+.vscode/
+
+# Ignoruj NuGet balíčky
+*.nupkg
+packages/
+
+# Ignoruj citlivé soubory a složky (certs)
+meetmeat/certs/

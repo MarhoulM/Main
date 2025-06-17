@@ -1,0 +1,12 @@
+.contact-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.toggleForm-btn {
+    color:  #A80B0B;
+    font-weight: bold;
+    border-color: #A80B0B;
+}

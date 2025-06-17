@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\services\\smtpemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\services\\smtpemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\emailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\emailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\appsettings.json",
+              "RelativeDocumentMoniker": "meetmeatApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\appsettings.json",
+              "RelativeToolTip": "meetmeatApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-17T09:23:44.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SmtpEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\SmtpEmailService.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Services\\SmtpEmailService.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\SmtpEmailService.cs",
+              "RelativeToolTip": "meetmeatApi\\Services\\SmtpEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T09:19:24.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\EmailController.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "meetmeatApi\\Controllers\\EmailController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T08:56:21.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Services\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\IEmailService.cs",
+              "RelativeToolTip": "meetmeatApi\\Services\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T08:54:19.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\EmailRequestDto.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\EmailRequestDto.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\EmailRequestDto.cs",
+              "RelativeToolTip": "meetmeatApi\\Dtos\\EmailRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T08:35:33.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Program.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Program.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Program.cs",
+              "RelativeToolTip": "meetmeatApi\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T19:58:40.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "meetmeatApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowEcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:24:19.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\UserLoginDto.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\UserLoginDto.cs",
+              "RelativeToolTip": "meetmeatApi\\Dtos\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:24:09.419Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+.submit-btn {
+    color: white;
+    font-weight: bold;
+    border-color: white;
+    background-color: #A80B0B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.checkout-container{
+    text-align: center;
+    max-width: 900px;
+    margin: 2.5px 20px; 
+    display: flex;
+    flex-direction: column;
+    min-height: 690px;
+    justify-content: center; 
+    align-items: center;   
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

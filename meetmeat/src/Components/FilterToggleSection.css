@@ -1,0 +1,50 @@
+
+.filter-toggle-section-container {
+    padding: 15px; 
+    margin: 10px 0; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    width: 100%; 
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.filter-toggle-button {
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: none;
+    background-color: #A80B0B;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1.1em;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto; 
+    min-width: 200px;
+}
+
+.filter-toggle-button:hover {
+    background-color: #820A0A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .filter-toggle-section-container {
+
+        padding: 10px; 
+        margin: 15px 0 10px 0; 
+    }
+
+    .filter-toggle-button {
+        width: 90%;
+        max-width: 300px;
+    }
+}

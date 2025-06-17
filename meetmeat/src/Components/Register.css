@@ -1,0 +1,110 @@
+.auth-form-container {
+    max-width: 450px; /* Maximální šířka formuláře */
+    margin: 40px auto; /* Centrování a vertikální mezery */
+    padding: 30px;
+    background-color: #f8f8f8; /* Stejný podklad jako filtry/karty */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Jemnější a hlubší stín */
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* Zajišťuje správný box model */
+}
+
+.auth-form-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em; /* Větší nadpis */
+    font-weight: 700;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Mezera mezi skupinami formuláře */
+}
+
+.form-group {
+    text-align: left; /* Zarovnání labelů a inputů doleva */
+}
+
+.form-group label {
+    display: block; /* Label na samostatném řádku */
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px; /* Větší padding pro inputy */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Zaoblené rohy */
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    box-sizing: border-box; /* Důležité pro šířku 100% s paddingem */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #A80B0B; /* Červený rámeček při fokusu */
+    box-shadow: 0 0 0 3px rgba(168, 11, 11, 0.2); /* Jemný stín při fokusu */
+}
+
+.input-error {
+    border-color: #d32f2f !important; /* Červený rámeček pro chyby */
+}
+
+.error-text {
+    color: #d32f2f;
+    font-size: 0.85em;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.submit-button {
+    padding: 12px 25px; /* Větší padding */
+    border-radius: 12px; /* Zaoblené rohy */
+    border: none;
+    background-color: #A80B0B; /* Tvá sytě červená */
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 15px; /* Mezera nad tlačítkem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #820A0A; /* Tmavší odstín pro hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
