@@ -13,6 +13,9 @@ namespace meetmeatApi.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
 
+        public DbSet<Order> Orders { get; set; } = default!;
+        public DbSet<OrderItem> OrderItems { get; set; } = default!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

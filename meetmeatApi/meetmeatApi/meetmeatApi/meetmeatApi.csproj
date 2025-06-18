@@ -25,4 +25,11 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\MM1.jpeg" />
+    <None Include="wwwroot\images\MM2.jpeg" />
+    <None Include="wwwroot\images\MM3.jpeg" />
+    <None Include="wwwroot\images\MMVP.jpeg" />
+  </ItemGroup>
+
 </Project>

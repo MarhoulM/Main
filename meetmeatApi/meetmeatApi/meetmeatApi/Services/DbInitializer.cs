@@ -33,7 +33,7 @@ namespace meetmeatApi.Services
                     Name = "Hovězí Jerky Klasik",
                     Price = 280,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/B0BEC5/263238?text=Jerky+Klasik",
+                    ImageUrl = "https://localhost:7240/images/MM1.jpeg",
                     Description = "Tradiční hovězí jerky, jemně kořeněné, sušené do křupava.",
                     Category = "Hovězí",
                     DetailDescription = new ProductDetailDescription
@@ -52,7 +52,7 @@ namespace meetmeatApi.Services
                     Name = "Vepřové Jerky Pikantní",
                     Price = 260,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/FFAB91/BF360C?text=Jerky+Pikant",
+                    ImageUrl = "https://localhost:7240/images/MMVP.jpeg",
                     Description = "Pikantní vepřové maso s chilli a uzenou paprikou, pro milovníky ostrých chutí.",
                     Category = "Vepřové",
                     DetailDescription = new ProductDetailDescription
@@ -71,7 +71,7 @@ namespace meetmeatApi.Services
                     Name = "Kuřecí Strips Sladké Chilli",
                     Price = 220,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/FFF176/F57F17?text=Strips+Chilli",
+                    ImageUrl = "https://localhost:7240/images/MM3.jpeg",
                     Description = "Lehké kuřecí maso s exotickou sladko-chilli marinádou.",
                     Category = "Kuřecí",
                     DetailDescription = new ProductDetailDescription
@@ -90,7 +90,7 @@ namespace meetmeatApi.Services
                     Name = "Sušené Hovězí Maso s Pepřem",
                     Price = 290,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/9FA8DA/303F9F?text=Hovězí+s+pepřem",
+                    ImageUrl = "https://localhost:7240/images/MM1.jpeg",
                     Description = "Kousky prémiového hovězího s čerstvě mletým černým pepřem.",
                     Category = "Hovězí",
                     DetailDescription = new ProductDetailDescription
@@ -109,7 +109,7 @@ namespace meetmeatApi.Services
                     Name = "Sušené Vepřové Maso s Česnekem",
                     Price = 270,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/C5E1A5/33691E/33691E?text=Vepřové+s+česnekem",
+                    ImageUrl = "https://localhost:7240/images/MM2.jpeg",
                     Description = "Intenzivní chuť česneku a bylinek na vepřovém mase.",
                     Category = "Vepřové",
                     DetailDescription = new ProductDetailDescription
@@ -128,7 +128,7 @@ namespace meetmeatApi.Services
                     Name = "Sušené Krůtí Maso Teriyaki",
                     Price = 240,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/B2DFDB/00695C?text=Krůtí+Teriyaki",
+                    ImageUrl = "https://localhost:7240/images/MM3.jpeg",
                     Description = "Jemné krůtí maso s typickou sladko-slanou teriyaki marinádou.",
                     Category = "Kuřecí",
                     DetailDescription = new ProductDetailDescription
@@ -147,7 +147,7 @@ namespace meetmeatApi.Services
                     Name = "Hovězí Jerky Extra Pálivé",
                     Price = 300,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/EF9A9A/D32F2F?text=Extra+Pálivé",
+                    ImageUrl = "https://localhost:7240/images/MM1.jpeg",
                     Description = "Pro ty, kteří se nebojí výzvy! Opravdu pálivé hovězí jerky.",
                     Category = "Hovězí",
                     DetailDescription = new ProductDetailDescription
@@ -166,7 +166,7 @@ namespace meetmeatApi.Services
                     Name = "Mix Sušených Masíček",
                     Price = 350,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/FFCC80/E65100?text=Mix+Masíček",
+                    ImageUrl = "https://localhost:7240/images/MM1.jpeg",
                     Description = "Výběr toho nejlepšího z naší nabídky sušených mas, ideální na ochutnávku.",
                     Category = "Mix",
                     DetailDescription = new ProductDetailDescription
@@ -185,7 +185,7 @@ namespace meetmeatApi.Services
                     Name = "Sušená Zvěřina s Bylinkami",
                     Price = 380,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/CFD8DC/546E7A?text=Zvěřina",
+                    ImageUrl = "https://localhost:7240/images/MM1.jpeg",
                     Description = "Exkluzivní sušené maso z divočiny s aromatickými lesními bylinkami.",
                     Category = "Zvěřina",
                     DetailDescription = new ProductDetailDescription
@@ -204,7 +204,7 @@ namespace meetmeatApi.Services
                     Name = "Sušené Hovězí Maso Sriracha",
                     Price = 295,
                     Currency = "Kč",
-                    ImageUrl = "https://placehold.co/250x200/FFCDD2/D50000?text=Sriracha",
+                    ImageUrl = "https://localhost:7240/images/MM1.jpeg",
                     Description = "Hovězí maso s oblíbenou pálivou omáčkou Sriracha pro pikantní zážitek.",
                     Category = "Hovězí",
                     DetailDescription = new ProductDetailDescription

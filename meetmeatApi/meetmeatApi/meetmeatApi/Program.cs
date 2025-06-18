@@ -56,6 +56,8 @@ public partial class Program
 
         builder.Services.AddTransient<IEmailService, SmtpEmailService>();
 
+        builder.Services.AddScoped<IOrderService, OrderService>();
+
         builder.Services.AddSwaggerGen(options =>
         {
             options.SwaggerDoc("v1", new OpenApiInfo { Title = "MeetMeat API", Version = "v1" });
@@ -108,6 +110,9 @@ public partial class Program
         }
 
         app.UseHttpsRedirection();
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
 
         app.UseRouting();
 

@@ -61,7 +61,6 @@ namespace meetmeatApi.Controllers
 
             var totalCount = await productsQuery.CountAsync();
 
-            // 4. Řazení
             if (!string.IsNullOrWhiteSpace(queryParams.OrderBy))
             {
                 productsQuery = queryParams.OrderBy.ToLower() switch
