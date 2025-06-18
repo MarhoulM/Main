@@ -22,9 +22,14 @@ const ProductCard = ({ products }) => {
             <div className="product-content">
               <Link to={`/products/${item.id}`}>
                 <img
-                  src={item.imageUrl}
+                  src={item.imageUrl || item.ImageUrl}
                   alt={item.name}
                   className="product-image"
+                  style={{
+                    width: "250px",
+                    height: "200px",
+                    objectFit: "cover",
+                  }}
                 />
                 <h2 className="product-name">{item.name}</h2>
                 <p className="product-description">{item.description}</p>

@@ -30,7 +30,10 @@ const Checkout = () => {
     setFormErrors({});
 
     if (cartItems.length === 0) {
-      alert("Váš košík zeje prázdnotou. Přidejte prosím produkty do košíku.");
+      setMessage(
+        "Váš košík zeje prázdnotou. Přidejte prosím produkty do košíku."
+      );
+      setLoading(false);
       return;
     }
     const errors = validateForm();
@@ -73,7 +76,8 @@ const Checkout = () => {
         const result = await response.json();
         setMessage(result.message || "Objednávka byla úspěšně odeslána.");
         clearCart();
-        navigate("/thank-you");
+        const receivedOrderId = result.OrderId || result.orderId;
+        navigate("/thank-you", { state: { orderId: receivedOrderId } });
       } else {
         const errorData = await response.json();
         setMessage(

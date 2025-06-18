@@ -1,8 +1,16 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const storedCartItems = localStorage.getItem("cartItems");
+      return storedCartItems ? JSON.parse(storedCartItems) : [];
+    } catch (error) {
+      console.error("Chyba při načítání položek z lokálního úložiště.", error);
+      return [];
+    }
+  });
 
   const addToCart = (product) => {
     setCartItems((prevItems) => {
@@ -19,6 +27,15 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    } catch (error) {
+      console.error("Chyba při ukládání do lokálního úložiště:", error);
+    }
+  }, [cartItems]);
+
   const removeFromCart = (productId) => {
     setCartItems((prevItems) =>
       prevItems.filter((item) => item.id !== productId)
@@ -31,11 +48,12 @@ export const CartProvider = ({ children }) => {
 
   const updateQuantity = (productId, newQuantity) => {
     setCartItems((prevItems) => {
-      return prevItems
-        .map((item) =>
-          item.id === productId ? { ...item, quantity: newQuantity } : item
-        )
-        .filter((item) => item.quantity > 0);
+      if (newQuantity <= 0) {
+        return prevItems.filter((item) => item.id !== productId);
+      }
+      return prevItems.map((item) =>
+        item.id === productId ? { ...item, quantity: newQuantity } : item
+      );
     });
   };
 
