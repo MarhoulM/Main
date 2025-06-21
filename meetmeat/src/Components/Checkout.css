@@ -1,23 +1,143 @@
-.submit-btn {
-    color: white;
-    font-weight: bold;
-    border-color: white;
-    background-color: #A80B0B;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 
 .checkout-container{
     text-align: center;
-    max-width: 900px;
-    margin: 2.5px 20px; 
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; 
     display: flex;
     flex-direction: column;
-    min-height: 690px;
     justify-content: center; 
     align-items: center;   
     background-color: #fff; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.checkout-form{
+    width: 95%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-summary-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    text-align: left; 
+    width: 100%;
+    max-width: 600px;
+}
+.cart-summary-list li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: right; 
+    width: 100%;
+    max-width: 600px;
+}
+
+.delivery-payment-section {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 5px; 
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.delivery-payment-section h3,
+.delivery-payment-section h4 { 
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.form-group.checkout{
+    text-align: center;
+}
+.radio-group-wrapper { 
+    margin-bottom: 10px;
+}
+.radio-group-wrapper h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+
+
+label.radio-option { 
+    margin-bottom: 10px;
+    color: #555;
+    cursor: pointer;
+    display: block; 
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+
+.order-notes-section {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.order-notes-section h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.order-notes-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    min-height: 100px;
+    resize: vertical;
+    color: white; 
+    background-color: #1a1a1a;
+    margin-top: 5px; 
+}
+
+.checkout-form .btn-primary {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .checkout-container,
+    .checkout-form,
+    .delivery-payment-section,
+    .order-notes-section,
+    .cart-summary-list,
+    .total-price {
+        max-width: 100%;
+        padding: 15px;
+    }
 }

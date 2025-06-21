@@ -82,6 +82,8 @@ const Navbar = ({ onSearch, searchTerm, onSearchSubmit, onClearSearch }) => {
             value={searchTerm}
             onChange={handleSearchChange}
             onClick={handleInputClick}
+            id="searchInput"
+            name="searchTerm"
           />
           <button className="search-btn" onClick={handleSearchBtnClick}>
             Hledat

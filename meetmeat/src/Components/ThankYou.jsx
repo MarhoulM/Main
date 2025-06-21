@@ -19,7 +19,7 @@ const ThankYou = () => {
         <p>
           Na váš e-mail jsme zaslali potvrzení objednávky s dalšími detaily.
         </p>
-        <button className="products" onClick={() => navigate("/products")}>
+        <button className="btn-primary" onClick={() => navigate("/products")}>
           Zpět na produkty
         </button>
       </div>

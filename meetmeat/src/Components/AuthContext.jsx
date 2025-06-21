@@ -15,14 +15,23 @@ export const AuthProvider = ({ children }) => {
     const storedUser = AuthService.getCurrentUser();
     if (storedUser) {
       setUser(storedUser);
+      console.log(
+        "AuthContext: Uživatel NALEZEN v localStorage. IsAuthenticated:",
+        !!storedUser
+      );
     }
     setLoading(false);
+    console.log("AuthContext: Loading nastaveno na FALSE.");
   }, []);
 
   const login = async (email, password) => {
     const response = await AuthService.login(email, password);
     if (response.success) {
       setUser(response.data);
+      console.log(
+        "AuthContext: Login úspěšný, uživatel nastaven:",
+        response.data
+      );
     }
     return response;
   };

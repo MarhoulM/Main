@@ -6,11 +6,15 @@ import Footer from "./Components/Footer";
 import Basket from "./Components/Basket";
 import Profile from "./Components/Profile";
 import Contact from "./Components/Contact";
+import Login from "./Components/Login";
 import Checkout from "./Components/Checkout";
 import ThankYou from "./Components/ThankYou";
+import MyOrders from "./Components/MyOrders";
+import OrderDetail from "./Components/OrderDetail";
 import ProductDetail from "./Components/ProductDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./Components/AuthContext";
+import ProtectedRoute from "./Components/ProtectedRoute";
 import Pager from "./Components/Pager";
 import FilterToggleSection from "./Components/FilterToggleSection";
 
@@ -148,14 +152,14 @@ function App() {
     <>
       <AuthProvider>
         <Router>
-          <div>
+          <div className="app-container">
             <Navbar
               onSearch={handleSearchChange}
               searchTerm={queryParams.searchTerm}
               onSearchSubmit={() => {}}
               onClearSearch={handleClearFilters}
             />
-            <div className="collect-data">
+            <div className="main-content">
               {loading && (
                 <div style={{ padding: "20px", textAlign: "center" }}>
                   <h2>Načítám produkty...</h2>
@@ -167,6 +171,7 @@ function App() {
               )}
               {error && (
                 <div
+                  className="error-message-box"
                   style={{ padding: "20px", textAlign: "center", color: "red" }}
                 >
                   <h2>Chyba při načítání produktů</h2>
@@ -181,14 +186,13 @@ function App() {
                   </p>
                 </div>
               )}
-            </div>
-            {!loading && !error && (
-              <div className="product-card-wrapper">
+
+              {!loading && !error && (
                 <Routes>
                   <Route
                     path="/"
                     element={
-                      <>
+                      <div className="product-page-wrapper">
                         <ProductCard products={products} />
                         <Pager
                           currentPage={queryParams.pageNumber}
@@ -197,13 +201,13 @@ function App() {
                           pageSize={queryParams.pageSize}
                           onPageSizeChange={handlePageSizeChange}
                         />
-                      </>
+                      </div>
                     }
                   />
                   <Route
                     path="/products"
                     element={
-                      <>
+                      <div className="product-page-wrapper">
                         <FilterToggleSection
                           queryParams={queryParams}
                           onCategoryChange={handleCategoryChange}
@@ -220,7 +224,7 @@ function App() {
                           pageSize={queryParams.pageSize}
                           onPageSizeChange={handlePageSizeChange}
                         />
-                      </>
+                      </div>
                     }
                   />
                   <Route
@@ -229,9 +233,26 @@ function App() {
                   />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/profile" element={<Profile />} />
+                  <Route path="/login" element={<Login />} />
                   <Route path="/basket" element={<Basket />} />
                   <Route path="/checkout" element={<Checkout />} />
                   <Route path="/thank-you" element={<ThankYou />} />
+                  <Route
+                    path="/my-orders"
+                    element={
+                      <ProtectedRoute>
+                        <MyOrders />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/my-orders/:orderId"
+                    element={
+                      <ProtectedRoute>
+                        <OrderDetail />
+                      </ProtectedRoute>
+                    }
+                  />
                   <Route
                     path="*"
                     element={
@@ -242,8 +263,8 @@ function App() {
                     }
                   />
                 </Routes>
-              </div>
-            )}
+              )}
+            </div>
             <Footer />
           </div>
         </Router>

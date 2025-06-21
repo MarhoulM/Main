@@ -6,7 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 const ProductDetail = ({ allProducts }) => {
   const { productId } = useParams();
   const navigate = useNavigate();
-
+  const { addToCart } = useCart();
   const product = allProducts.find((p) => p.id === parseInt(productId));
 
   if (!product) {

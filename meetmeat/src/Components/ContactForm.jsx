@@ -116,7 +116,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           ></textarea>
-          <button className="submit" type="submit" disabled={loading}>
+          <button className="btn-primary" type="submit" disabled={loading}>
             {loading ? "Odesílám..." : "Odeslat "}
           </button>
         </div>

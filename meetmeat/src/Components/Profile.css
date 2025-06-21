@@ -1,28 +1,15 @@
-.link-btn, .register-btn, .logout-btn{
-      color:  #A80B0B;
-    font-weight: bold;
-    border-color: #A80B0B;
-}
 
 .auth-container{
     text-align: center;
     max-width: 900px;
-    margin: 2.5px 20px; 
+    margin: 2.5px auto; 
     padding: 0 20px; 
-    display: flex;
-    flex-direction: column;
-    min-height: 690px;
-    justify-content: center; 
-    align-items: center;   
-    background-color: #fff; 
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 .profile-container{
-      text-align: center;
+    text-align: center;
     max-width: 900px;
-    margin: 2.5px 20px; 
-    padding: 0 20px; 
+    margin: 2.5px 10px; 
+    padding: 0 10px; 
     display: flex;
     flex-direction: column;
     min-height: 690px;
@@ -33,3 +20,11 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+h1, h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn-primary.spacer{
+    margin-bottom: 10px;
+}

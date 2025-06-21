@@ -66,9 +66,28 @@ const Checkout = () => {
     };
 
     try {
+      const userString = localStorage.getItem("user");
+      let token = null;
+
+      if (userString) {
+        try {
+          const userData = JSON.parse(userString);
+          token = userData.token;
+        } catch (e) {
+          console.error("Chyba při parsování 'user' z localStorage:", e);
+        }
+      }
+
+      const requestHeaders = {
+        "Content-Type": "application/json",
+      };
+      if (token) {
+        requestHeaders["Authorization"] = `Bearer ${token}`;
+      }
+
       const response = await fetch("https://localhost:7240/api/Order/create", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: requestHeaders,
         body: JSON.stringify(orderData),
       });
 
@@ -230,74 +249,78 @@ const Checkout = () => {
                   <p className="error-message">{formErrors.phone}</p>
                 )}
               </div>
-              <h3>Doprava a platba</h3>
-              <div className="form-group">
-                <h3>Doprava:</h3>
-                <label>
-                  <input
-                    name="deliveryMethod"
-                    type="radio"
-                    value="standard"
-                    checked={deliveryMethod === "standard"}
-                    onChange={(e) => setDeliveryMethod(e.target.value)}
-                  />
-                  Standardní doprava 125 Kč
-                </label>
-                <label>
-                  <input
-                    name="deliveryMethod"
-                    type="radio"
-                    value="pickupStore"
-                    checked={deliveryMethod === "pickupStore"}
-                    onChange={(e) => setDeliveryMethod(e.target.value)}
-                  />
-                  Osobní odběr na prodejně.
-                </label>
-                <label>
-                  <input
-                    name="deliveryMethod"
-                    type="radio"
-                    value="pickupBox"
-                    checked={deliveryMethod === "pickupBox"}
-                    onChange={(e) => setDeliveryMethod(e.target.value)}
-                  />
-                  Osobní odběr v boxu.
-                </label>
+              <div className="delivery-payment-section">
+                <h3>Doprava a platba</h3>
+                <div className="form-group checkout">
+                  <h3>Doprava:</h3>
+                  <label>
+                    <input
+                      name="deliveryMethod"
+                      type="radio"
+                      value="standard"
+                      checked={deliveryMethod === "standard"}
+                      onChange={(e) => setDeliveryMethod(e.target.value)}
+                    />
+                    Standardní doprava 125 Kč
+                  </label>
+                  <label>
+                    <input
+                      name="deliveryMethod"
+                      type="radio"
+                      value="pickupStore"
+                      checked={deliveryMethod === "pickupStore"}
+                      onChange={(e) => setDeliveryMethod(e.target.value)}
+                    />
+                    Osobní odběr na prodejně.
+                  </label>
+                  <label>
+                    <input
+                      name="deliveryMethod"
+                      type="radio"
+                      value="pickupBox"
+                      checked={deliveryMethod === "pickupBox"}
+                      onChange={(e) => setDeliveryMethod(e.target.value)}
+                    />
+                    Osobní odběr v boxu.
+                  </label>
+                </div>
+                <div className="form-group checkout">
+                  <h3>Platba:</h3>
+                  <label>
+                    <input
+                      name="paymentMethod"
+                      type="radio"
+                      value="cash-on-delivery"
+                      checked={paymentMethod === "cash-on-delivery"}
+                      onChange={(e) => setPaymentMethod(e.target.value)}
+                    />
+                    Platba při převzetí
+                  </label>
+                  <label>
+                    <input
+                      name="paymentMethod"
+                      type="radio"
+                      value="card"
+                      checked={paymentMethod === "card"}
+                      onChange={(e) => setPaymentMethod(e.target.value)}
+                    />
+                    Online platba kartou
+                  </label>
+                </div>
               </div>
-              <div className="form-group">
-                <h3>Platba:</h3>
-                <label>
-                  <input
-                    name="paymentMethod"
-                    type="radio"
-                    value="cash-on-delivery"
-                    checked={paymentMethod === "cash-on-delivery"}
-                    onChange={(e) => setPaymentMethod(e.target.value)}
-                  />
-                  Platba při převzetí
-                </label>
-                <label>
-                  <input
-                    name="paymentMethod"
-                    type="radio"
-                    value="card"
-                    checked={paymentMethod === "card"}
-                    onChange={(e) => setPaymentMethod(e.target.value)}
-                  />
-                  Online platba kartou
-                </label>
-              </div>
-              <div className="order-notes">
+              <div className="order-notes-section">
                 <h3>Poznámky k objednávce</h3>
-                <label htmlFor="orderNotes">Poznámky:</label>
-                <textarea
-                  id="orderNotes"
-                  value={orderNotes}
-                  onChange={(e) => setOrderNotes(e.target.value)}
-                  rows="4"
-                ></textarea>
+                <div className="form-group">
+                  <label htmlFor="orderNotes">Poznámky:</label>
+                  <textarea
+                    id="orderNotes"
+                    value={orderNotes}
+                    onChange={(e) => setOrderNotes(e.target.value)}
+                    rows="4"
+                  ></textarea>
+                </div>
               </div>
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="btn-primary">
                 Odeslat objednávku
               </button>
             </form>

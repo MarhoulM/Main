@@ -30,7 +30,7 @@ const Contact = () => {
     <>
       <h1>Kontakty</h1>
       <p>Můžete nám napsat o masíčku i pomocí formuláře.</p>
-      <button className="toggleForm-btn" type="button" onClick={toggleForm}>
+      <button className="btn-primary" type="button" onClick={toggleForm}>
         {showForm ? "Skrýt formulář" : "Formulář"}
       </button>
       {showForm && (
@@ -61,7 +61,7 @@ const Contact = () => {
           width="486"
           height="364.5"
           style={{ border: 0 }}
-          allowFulScreen={true}
+          allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="MeetMeat Location"

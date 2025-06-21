@@ -1,36 +1,117 @@
-.product-card-container{
+.product-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.25rem;
-    align-items: stretch;
-
 }
+
 .product-card {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
-    height: 100%;
+    max-width: calc(25% - 0.25rem);
+    width: 100%; 
     min-height: 480px;
     text-align: center;
-  
+    
     border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
 }
-.product-name{
-    height: 70px;
+
+.product-content {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 10px;
+    box-sizing: border-box;
 }
-.product-content{
-    flex-grow: 1;
+
+
+.product-image {
+    width: 100%;
+    max-width: 250px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    margin-bottom: 10px; 
 }
+
+
+.product-name {
+    height: 70px; 
+    overflow: hidden; 
+    line-height: 1.2; 
+    margin-bottom: 5px; 
+    font-size: 1.1rem; 
+    color: #333;
+}
+
+
+.product-description-wrapper {
+    flex-grow: 1; 
+    overflow: hidden; 
+    margin-bottom: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #555;
+    white-space: normal; 
+}
+
+.product-footer {
+    padding: 10px;
+    background-color: #f9f9f9; 
+    border-top: 1px solid #eee; 
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: auto; 
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    margin-top: auto; 
+    margin-bottom: 10px; 
+}
+
+@media (max-width: 1200px) {
+  .product-card {
+    max-width: calc(33.333% - 0.25rem); 
+  }
+}
+
+@media (max-width: 900px) {
+  .product-card {
+    max-width: calc(50% - 0.25rem); 
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    max-width: calc(100% - 0.25rem);
+
+  }
+}
+
+
+
 a, a:hover, a:visited {
     text-decoration: none;
     color: inherit;
-}
-.add-to-cart-btn{
-    margin-bottom: 5px;
-    color:  #A80B0B;
-    font-weight: bold;
-    border-color: #A80B0B;
 }

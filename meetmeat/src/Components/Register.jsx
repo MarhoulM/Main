@@ -123,7 +123,7 @@ const Register = () => {
             <p className="error-text">{errors.confirmPassword}</p>
           )}
         </div>
-        <button type="submit" disabled={loading} className="submit-button">
+        <button type="submit" disabled={loading} className="btn-primary">
           {" "}
           {loading ? "Registruji se..." : "Registrovat"}
         </button>

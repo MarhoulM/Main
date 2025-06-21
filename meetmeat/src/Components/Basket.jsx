@@ -48,14 +48,14 @@ const Basket = () => {
                   </p>
                   <div className="basket-item-quantity">
                     <button
-                      className="quantity-btn"
+                      className="btn"
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
                     >
                       -
                     </button>
                     <span className="quantity-item">{item.quantity}</span>
                     <button
-                      className="quantity-btn"
+                      className="btn"
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     >
                       +
@@ -66,7 +66,7 @@ const Basket = () => {
                   </p>
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="remove-item-btn"
+                    className="btn"
                   >
                     Odebrat
                   </button>

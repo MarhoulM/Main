@@ -1,5 +1,120 @@
-.btn{
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    max-width: 800px;
+    margin: 0 auto; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    box-sizing: border-box; 
+}
+
+.product-detail-image {
+    width: 100%; 
+    max-width: 400px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+}
+
+
+.product-detail-container h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+    color: #333; 
+    text-align: center; 
+}
+
+
+.product-detail-container .product-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: center; 
+}
+
+.product-detail-container .product-detail-category,
+.product-detail-container .product-detail-price {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.product-detail-container .product-detail-price {
+    font-size: 1.5rem;
+    color: #A80B0B; 
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.product-detail-description {
+    width: 100%; 
+    margin-top: 20px;
+    border-top: 1px solid #eee; 
+    padding-top: 20px;
+    text-align: left; 
+}
+
+.product-detail-description h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center; 
+}
+
+.product-detail-description p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.product-detail-container .btn {
+    margin-top: 20px; 
+    width: 100%; 
+    max-width: 300px; 
+}
+
+.product-detail-container .btn {
+    background-color: transparent;
     color: #A80B0B;
     font-weight: bold;
-    border-color: #A80B0B;
+    border: 2px solid #A80B0B;
+}
+
+.product-detail-container .btn:hover {
+    background-color: #A80B0B;
+    color: white;
+}
+
+
+.product-detail-container .back-button {
+    margin-top: 10px; 
+    background-color: #f0f0f0; 
+    color: #333; 
+    border-color: #ccc;
+}
+
+.product-detail-container .back-button:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .product-detail-container {
+        padding: 10px; 
+    }
+    .product-detail-image {
+        max-width: 100%; 
+    }
+    .product-detail-container h1 {
+        font-size: 2rem; 
+    }
+    .product-detail-container .btn {
+        max-width: 100%; 
+    }
 }
