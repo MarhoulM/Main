@@ -20,7 +20,8 @@ namespace meetmeatApi.Models
         [ForeignKey("ProductId")]
         public Product Product { get; set; } = default!;
 
- 
+        public string? ProductName { get; set; }
+
         [Required]
         [Range(1, int.MaxValue, ErrorMessage = "Množství musí být alespoň 1.")] 
         public int Quantity { get; set; }

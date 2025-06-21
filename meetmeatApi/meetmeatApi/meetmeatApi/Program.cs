@@ -48,6 +48,8 @@ public partial class Program
             };
         });
 
+        builder.Services.AddScoped<IOrderService, OrderService>();
+
         builder.Services.AddAuthorization();
 
         builder.Services.AddControllers();

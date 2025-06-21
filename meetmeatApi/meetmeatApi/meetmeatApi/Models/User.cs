@@ -12,7 +12,9 @@ namespace meetmeatApi.Models
 
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
         public required string PasswordHash { get; set; }
+
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

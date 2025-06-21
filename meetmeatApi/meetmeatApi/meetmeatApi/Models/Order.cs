@@ -63,5 +63,7 @@ namespace meetmeatApi.Models
 
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
+        public string Status {  get; set; } = "Pending";
+
     }
 }

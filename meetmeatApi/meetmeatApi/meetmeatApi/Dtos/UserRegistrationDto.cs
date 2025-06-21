@@ -9,7 +9,7 @@ namespace meetmeatApi.Dtos
         public required string Username { get; set; }
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
         [Required(ErrorMessage ="Heslo je povinné.")]
         [StringLength(100, MinimumLength = 6, ErrorMessage = "Heslo musí mít alespoň 6 znaků.")]
         [DataType(DataType.Password)]

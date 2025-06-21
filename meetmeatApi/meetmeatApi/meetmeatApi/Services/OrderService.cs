@@ -1,12 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using meetmeatApi.Data; 
+﻿using meetmeatApi.Data; 
 using meetmeatApi.Dtos; 
 using meetmeatApi.Models; 
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Numerics;
+using System.Reflection.Emit;
+using System.Threading.Tasks;
 
 namespace meetmeatApi.Services
 {
@@ -53,7 +56,8 @@ namespace meetmeatApi.Services
                 {
                     ProductId = itemDto.ProductId,
                     Quantity = itemDto.Quantity,
-                    PriceAtOrder = product.Price
+                    PriceAtOrder = product.Price,
+                    ProductName = product.Name
                 };
                 orderItems.Add(orderItem);
                 totalAmount += orderItem.Quantity * orderItem.PriceAtOrder;
@@ -61,9 +65,10 @@ namespace meetmeatApi.Services
 
             var order = new Order
             {
+                UserId = userId,
                 OrderDate = DateTime.UtcNow,  
                 TotalAmount = totalAmount,     
-                UserId = userId,               
+                               
                 OrderItems = orderItems,    
 
                 FirstName = request.FirstName,
@@ -75,7 +80,8 @@ namespace meetmeatApi.Services
                 Phone = request.Phone,
                 DeliveryMethod = request.DeliveryMethod,
                 PaymentMethod = request.PaymentMethod,
-                Note = request.Note
+                Note = request.Note,
+                Status = "Pending"
             };
 
 
@@ -105,6 +111,96 @@ namespace meetmeatApi.Services
             }
 
             return order; 
+        }
+
+        public async Task<IEnumerable<OrderResponseDto>> GetUserOrdersAsync(int userId)
+        {
+            _logger.LogInformation($"Retrieving orders for user ID: {userId}.");
+            var orders = await _context.Orders.Where(o => o.UserId == userId)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                .OrderByDescending(o => o.OrderDate)
+                .ToListAsync();
+
+            if (!orders.Any())
+            {
+                _logger.LogInformation($"No orders found for user ID: {userId}.");
+                return new List<OrderResponseDto>();
+            }
+
+            return orders.Select(o => new OrderResponseDto
+            {
+                Id = o.Id,
+                OrderDate = o.OrderDate,
+                TotalAmount = o.TotalAmount,
+                Status = o.Status,
+                FirstName = o.FirstName,
+                LastName = o.LastName,
+                Email = o.Email,
+                Address = o.Address,
+                City = o.City,
+                ZipCode = o.ZipCode,
+                Phone = o.Phone,
+                DeliveryMethod = o.DeliveryMethod,
+                PaymentMethod = o.PaymentMethod,
+                Note = o.Note,
+                Items = o.OrderItems.Select(oi => new OrderItemResponseDto
+                {
+                    ProductId = oi.ProductId,
+                    ProductName = oi.Product?.Name ?? oi.ProductName ?? "Neznámý produkt",
+                    UnitPrice = oi.PriceAtOrder,
+                    Quantity = oi.Quantity
+                }).ToList()
+            }).ToList();
+        }
+
+        public async Task<OrderResponseDto?> GetOrderByIdAsync(int orderId, int? userId)
+        {
+            _logger.LogInformation($"Attempting to retrieve order ID: {orderId} for user ID: {userId?.ToString() ?? "Anonymous"}.");
+
+            if (!userId.HasValue)
+            {
+                _logger.LogWarning($"Unauthorized attempt to access order {orderId} by anonymous user.");
+                return null;
+            }
+
+            var order = await _context.Orders
+                .Where(o => o.Id == orderId && o.UserId == userId.Value)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                .FirstOrDefaultAsync();
+
+            if (order == null)
+            {
+                _logger.LogInformation($"Order ID: {orderId} not found or not accessible by user ID: {userId}.");
+                return null;
+            }
+
+            _logger.LogInformation($"Order ID: {order.Id} successfully retrieved for user ID: {userId}.");
+            return new OrderResponseDto
+            {
+                Id = order.Id,
+                OrderDate = order.OrderDate,
+                TotalAmount = order.TotalAmount,
+                Status = order.Status,
+                FirstName = order.FirstName,
+                LastName = order.LastName,
+                Email = order.Email,
+                Address = order.Address,
+                City = order.City,
+                ZipCode = order.ZipCode,
+                Phone = order.Phone,
+                DeliveryMethod = order.DeliveryMethod,
+                PaymentMethod = order.PaymentMethod,
+                Note = order.Note,
+                Items = order.OrderItems.Select(oi => new OrderItemResponseDto
+                {
+                    ProductId = oi.ProductId,
+                    ProductName = oi.Product?.Name ?? oi.ProductName ?? "Neznámý produkt",
+                    UnitPrice = oi.PriceAtOrder,
+                    Quantity = oi.Quantity
+                }).ToList()
+            };
         }
 
         private string BuildOrderConfirmationEmailBody(Order order, Dictionary<int, Product> products)

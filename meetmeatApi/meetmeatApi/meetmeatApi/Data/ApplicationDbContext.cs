@@ -20,6 +20,19 @@ namespace meetmeatApi.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Order>().HasOne(o => o.User).WithMany(u => u.Orders).HasForeignKey(o => o.UserId).IsRequired(false).OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Order>().HasMany(o => o.OrderItems)
+            .WithOne(oi => oi.Order)
+            .HasForeignKey(oi => oi.OrderId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderItem>()
+           .HasOne(oi => oi.Product)
+           .WithMany() 
+           .HasForeignKey(oi => oi.ProductId)
+           .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Username)
                 .IsUnique();
