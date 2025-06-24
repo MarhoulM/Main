@@ -17,6 +17,7 @@ import { AuthProvider } from "./Components/AuthContext";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Pager from "./Components/Pager";
 import FilterToggleSection from "./Components/FilterToggleSection";
+import Loader from "./Components/Loader";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -162,7 +163,10 @@ function App() {
             <div className="main-content">
               {loading && (
                 <div style={{ padding: "20px", textAlign: "center" }}>
-                  <h2>Načítám produkty...</h2>
+                  <h2>Načítám produkty</h2>
+                  <div className="loading-container">
+                    <Loader />
+                  </div>
                   <p>
                     Omlouváme se za zpoždění, načítám data z našeho serveru
                     MeetMeatApi.

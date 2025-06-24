@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./OrderDetail.css";
+import Loader from "./Loader";
 
 const OrderDetail = () => {
   const { orderId } = useParams();
@@ -85,8 +86,8 @@ const OrderDetail = () => {
 
   if (loading) {
     return (
-      <div className="order-detail-container">
-        Načítání detailu objednávky...
+      <div className="order-detail-container loading-container">
+        <span>Načítání detailu objednávky</span> <Loader />
       </div>
     );
   }

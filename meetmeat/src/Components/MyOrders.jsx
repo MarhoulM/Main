@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./MyOrders.css";
+import Loader from "./Loader";
 
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -59,7 +60,11 @@ const MyOrders = () => {
   }, [navigate]);
 
   if (loading) {
-    return <div className="my-orders-container">Načítání objednávek...</div>;
+    return (
+      <div className="my-orders-container loading-container">
+        <span>Načítání objednávek</span> <Loader />
+      </div>
+    );
   }
 
   if (error) {

@@ -168,3 +168,13 @@ textarea:focus {
     border-color: #A80B0B;
     box-shadow: 0 0 5px rgba(168, 11, 11, 0.5);
 }
+
+.loading-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%; 
+}
