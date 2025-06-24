@@ -10,11 +10,11 @@ namespace meetmeatApi.Data
         {
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
-        public DbSet<Order> Orders { get; set; } = default!;
-        public DbSet<OrderItem> OrderItems { get; set; } = default!;
+        public virtual DbSet<Order> Orders { get; set; } = default!;
+        public virtual DbSet<OrderItem> OrderItems { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

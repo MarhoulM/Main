@@ -3,80 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDD1798-59DA-4471-BFF9-83378FB083F5}|MeetMeatApi.Tests\\MeetMeatApi.Tests.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi.tests\\ordercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EDD1798-59DA-4471-BFF9-83378FB083F5}|MeetMeatApi.Tests\\MeetMeatApi.Tests.csproj|solutionrelative:meetmeatapi.tests\\ordercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\meetmeatapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\meetmeatapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\migrations\\20250619100329_addorderdetailstodatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\migrations\\20250619100329_addorderdetailstodatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\userregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\userregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\orderitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\orderitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\orderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\orderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\emailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\emailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\createorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\createorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dtos\\createorderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dtos\\createorderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,236 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Models\\User.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Models\\User.cs",
-              "RelativeToolTip": "meetmeatApi\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:45:11.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\LoginResponseDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\LoginResponseDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:44:38.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EmailRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\EmailRequestDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\EmailRequestDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\EmailRequestDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\EmailRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:41:42.289Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Models\\Order.cs",
-              "RelativeToolTip": "meetmeatApi\\Models\\Order.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:31:15.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Models\\OrderItem.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Models\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Models\\OrderItem.cs",
-              "RelativeToolTip": "meetmeatApi\\Models\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:25:36.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\OrderController.cs",
               "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\OrderController.cs",
               "RelativeToolTip": "meetmeatApi\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAqwGsAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowEsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:37:51.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\OrderService.cs",
-              "RelativeToolTip": "meetmeatApi\\Services\\OrderService.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAABcBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:32:07.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250619100329_AddOrderDetailsToDatabase.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Migrations\\20250619100329_AddOrderDetailsToDatabase.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Migrations\\20250619100329_AddOrderDetailsToDatabase.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Migrations\\20250619100329_AddOrderDetailsToDatabase.cs",
-              "RelativeToolTip": "meetmeatApi\\Migrations\\20250619100329_AddOrderDetailsToDatabase.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T10:03:29.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "OrderItemResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\OrderItemResponseDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\OrderItemResponseDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\OrderItemResponseDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\OrderItemResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:27:17.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Program.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Program.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Program.cs",
-              "RelativeToolTip": "meetmeatApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:59:42.685Z",
+              "WhenOpened": "2025-06-23T17:36:53.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\UserLoginDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\UserLoginDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\UserLoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "OrderControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\MeetMeatApi.Tests\\OrderControllerTests.cs",
+              "RelativeDocumentMoniker": "MeetMeatApi.Tests\\OrderControllerTests.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\MeetMeatApi.Tests\\OrderControllerTests.cs",
+              "RelativeToolTip": "MeetMeatApi.Tests\\OrderControllerTests.cs",
+              "ViewState": "AgIAAGsCAAAAAAAAAAAcwHoCAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:46:38.062Z"
+              "WhenOpened": "2025-06-23T17:19:31.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "meetmeatApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAIA6wHMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T08:49:49.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\appsettings.json",
-              "RelativeDocumentMoniker": "meetmeatApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\appsettings.json",
-              "RelativeToolTip": "meetmeatApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-20T09:18:37.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "meetmeatApi.csproj",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\meetmeatApi.csproj",
-              "RelativeDocumentMoniker": "meetmeatApi\\meetmeatApi.csproj",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\meetmeatApi.csproj",
-              "RelativeToolTip": "meetmeatApi\\meetmeatApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-20T08:56:23.12Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\IOrderService.cs",
               "RelativeDocumentMoniker": "meetmeatApi\\Services\\IOrderService.cs",
               "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\IOrderService.cs",
               "RelativeToolTip": "meetmeatApi\\Services\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:30:43.686Z"
+              "WhenOpened": "2025-06-23T15:09:59.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserRegistrationDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\UserRegistrationDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\UserRegistrationDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\UserRegistrationDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\UserRegistrationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\OrderService.cs",
+              "RelativeToolTip": "meetmeatApi\\Services\\OrderService.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAcwBABAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:47:44.912Z"
+              "WhenOpened": "2025-06-23T15:09:48.341Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OrderResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\OrderResponseDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\OrderResponseDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\OrderResponseDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\OrderResponseDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "meetmeatApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAcwAIBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:29:02.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateOrderItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\CreateOrderItemDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\CreateOrderItemDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\CreateOrderItemDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\CreateOrderItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T08:21:10.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreateOrderRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\CreateOrderRequestDto.cs",
-              "RelativeDocumentMoniker": "meetmeatApi\\Dtos\\CreateOrderRequestDto.cs",
-              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dtos\\CreateOrderRequestDto.cs",
-              "RelativeToolTip": "meetmeatApi\\Dtos\\CreateOrderRequestDto.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAuwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T18:33:15.51Z"
+              "WhenOpened": "2025-06-23T11:08:56.634Z"
             }
           ]
         }

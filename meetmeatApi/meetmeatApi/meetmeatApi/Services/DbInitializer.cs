@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace meetmeatApi.Services
 {
@@ -13,10 +14,19 @@ namespace meetmeatApi.Services
 
         public static async Task Initialize(ApplicationDbContext context, ILogger<Program> logger) 
         {
-          
-            await context.Database.MigrateAsync();
 
-            
+            if (context.Database.IsRelational())
+            {
+                logger.LogInformation("DbInitializer: Applying migrations to relational database...");
+                await context.Database.MigrateAsync();
+                logger.LogInformation("DbInitializer: Migrations applied successfully.");
+            }
+            else
+            {
+                logger.LogInformation("DbInitializer: Using non-relational database (e.g., in-memory). Skipping MigrateAsync.");
+            }
+
+
             if (await context.Products.AnyAsync())
             {
                 logger.LogInformation("DbInitializer: Database already contains products. Skipping seeding.");
