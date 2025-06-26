@@ -1,0 +1,109 @@
+html, body, #root {
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  min-width: 320px; 
+}
+
+html, body {
+  min-height: 100vh; 
+  overflow-y: auto; 
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.main-content {
+  padding-top: 0; 
+  min-height: calc(100vh - var(--navbar-height, 100px)); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  overflow-x: hidden; 
+  overflow-y: initial; 
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    min-height: calc(100vh - 160px); 
+  }
+}
+
+.content-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-grow: 1; 
+}
+.download-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+  margin: 0 auto; 
+}
+
+.download-items {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%; 
+}
+
+.portfolio-container{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+     min-height: 50vh;
+    width: 100%;
+}
+
+.category{
+  display: flex;
+  align-content: flex-start;
+  align-items: center; 
+}
+.js{
+background-color: yellow;
+color: black;
+padding: 0px 10px;
+margin: 0px 2px;
+}
+.csharp{
+background-color: #0D00FF;
+color: white;
+padding: 0px 10px;
+margin: 0px 2px;
+}
+
+.react{
+background-color: #53E9ED;
+color: black;
+padding: 0px 10px;
+margin: 0px 2px;
+}
+
+.dotnetcore{
+background-color: #7542F0;
+color: white;
+padding: 0px 10px;
+margin: 0px 2px;
+}
