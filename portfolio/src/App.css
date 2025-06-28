@@ -1,23 +1,43 @@
-html, body, #root {
+#root {
+display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+   overflow: visible; 
+}
+
+html, body {
   height: 100%; 
   margin: 0;
   padding: 0;
   min-width: 320px; 
-}
-
-html, body {
-  min-height: 100vh; 
   overflow-y: auto; 
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  position: relative; 
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+.navbar-wrapper {
+  position: sticky; 
+  top: 0; 
+  width: 100%; 
+  z-index: 50; 
+  background-color: #242424;
+  margin-bottom: 0;
+}
+
+#profil-section,
+#job-experience-section,
+#education-section,
+#other-section {
+  scroll-margin-top: 92px;
+}
+
 .main-content {
   padding-top: 0; 
-  min-height: calc(100vh - var(--navbar-height, 100px)); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,13 +45,16 @@ html, body {
   padding-right: 10px;
   padding-bottom: 20px;
   padding-left: 10px;
-  overflow-x: hidden; 
-  overflow-y: initial; 
 }
 
 @media (min-width: 768px) {
   .main-content {
     min-height: calc(100vh - 160px); 
+  }
+
+  .navbar-wrapper {
+    width: 100%; 
+    margin-top: 0;
   }
 }
 
@@ -39,9 +62,12 @@ html, body {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  margin: 20px auto;
-  padding: 20px;
   box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  flex-direction: column; 
+  min-height: 100%;
+  padding-bottom: 0;
 }
 
 .contact-form-container {
@@ -80,30 +106,105 @@ html, body {
   display: flex;
   align-content: flex-start;
   align-items: center; 
-}
-.js{
-background-color: yellow;
-color: black;
-padding: 0px 10px;
-margin: 0px 2px;
-}
-.csharp{
-background-color: #0D00FF;
-color: white;
-padding: 0px 10px;
-margin: 0px 2px;
+  font-weight: 500;
 }
 
-.react{
-background-color: #53E9ED;
-color: black;
-padding: 0px 10px;
-margin: 0px 2px;
+.js {
+  background-color: #f7df1e; 
+  color: black;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px; 
 }
 
-.dotnetcore{
-background-color: #7542F0;
-color: white;
-padding: 0px 10px;
-margin: 0px 2px;
+.csharp {
+  background-color: #922285; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.react {
+  background-color: #61dafb; 
+  color: black;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.dotnetcore {
+  background-color: #512bd4; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.docker {
+  background-color: #2496ed; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.vite {
+  background-color: #646cff; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.blazor {
+  background-color: #512bd4; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.php {
+  background-color: #777bb4; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+.swagger {
+  background-color: #85ea2d; 
+  color: black;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.vscode {
+  background-color: #007acc; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.visualstudio {
+  background-color: #5c2d91; 
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+
+.cert{
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+}
+.cert img {
+  max-width: 100%;
+  height: auto;
+  display: block; 
+  margin: 0 auto; 
 }

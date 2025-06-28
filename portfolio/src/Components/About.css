@@ -1,0 +1,28 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible; 
+  flex-grow: 1;
+}
+
+.about-navbar {
+  position: sticky;
+  top: 0;
+  background-color: #242424;
+  z-index: 40;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  about-navbar {
+    top: 53px; 
+  }
+}

@@ -1,25 +1,30 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import Info from "./Info";
-import Navbar from "./Navbar";
 import DynamicImg from "./DynamicImg";
 import "./Header.css";
 
-const Header = ({ navbarRef }) => {
+const Header = ({ hoveredPath }) => {
+  const location = useLocation();
+  const isAboutPage = location.pathname === "/about";
   return (
     <>
-      <header className="header">
+      <header className={`header ${isAboutPage ? "header--about" : ""}`}>
         <div className="header-inner-container">
           <div className="header-top-section">
-            <div className="dynamic-img-wrapper">
-              <DynamicImg />
+            <div
+              className={`dynamic-img-wrapper ${
+                isAboutPage ? "dynamic-img-wrapper--about" : ""
+              }`}
+            >
+              <DynamicImg isAboutPage={isAboutPage} hoveredPath={hoveredPath} />
               <div className="dynamic-img-placeholder-circle"></div>
             </div>
-            <div className="info-container">
-              <Info />
-            </div>
-          </div>
-          <div className="navbar-wrapper" ref={navbarRef}>
-            <Navbar />
+            {!isAboutPage && (
+              <div className="info-container">
+                <Info />
+              </div>
+            )}
           </div>
         </div>
       </header>

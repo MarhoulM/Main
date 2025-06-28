@@ -1,58 +1,77 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./Navbar.css";
+import "./About.css";
 
 const AboutNavbar = ({ sectionRef }) => {
   const [activeSection, setActiveSection] = useState("profil-section");
-  const observer = useRef(null);
+  const scrollTimeout = useRef(null);
 
-  const scrollToId = (id) => {
+  const headerHeight = 92;
+
+  const scrollToId = useCallback((id) => {
     const section = document.getElementById(id);
     if (section) {
+      setActiveSection(id);
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  };
+  }, []);
 
   useEffect(() => {
-    const header = document.querySelector(".header");
-    let headerHeight = 0;
-    if (header) {
-      headerHeight = header.offsetHeight;
-    }
+    const getActiveSectionId = () => {
+      let currentActive = "profil-section";
+      let minDistanceFromTop = Infinity;
 
-    const options = {
-      root: null,
-      rootMargin: `-${headerHeight + 20}px 0px -50% 0px`,
-      threshold: 0,
-    };
+      Object.values(sectionRef).forEach((ref) => {
+        if (ref.current) {
+          const section = ref.current;
+          const rect = section.getBoundingClientRect();
+          const id = section.id;
 
-    const callback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const rect = entry.target.getBoundingClientRect();
+          const sectionTopRelativeToViewport = rect.top;
+
           if (
-            rect.top <= headerHeight + 50 &&
-            rect.bottom > headerHeight + 50
+            sectionTopRelativeToViewport <= headerHeight + 5 &&
+            sectionTopRelativeToViewport > -section.offsetHeight
           ) {
-            setActiveSection(entry.target.id);
+            const distanceFromHeader = Math.abs(
+              sectionTopRelativeToViewport - headerHeight
+            );
+            if (distanceFromHeader < minDistanceFromTop) {
+              minDistanceFromTop = distanceFromHeader;
+              currentActive = id;
+            }
           }
         }
       });
+      return currentActive;
     };
 
-    observer.current = new IntersectionObserver(callback, options);
-
-    Object.values(sectionRef).forEach((ref) => {
-      if (ref.current) {
-        observer.current.observe(ref.current);
+    const handleScroll = () => {
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
       }
-    });
+      scrollTimeout.current = setTimeout(() => {
+        const newActive = getActiveSectionId();
+        if (newActive !== activeSection) {
+          setActiveSection(newActive);
+        }
+      }, 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const initialCheckTimeout = setTimeout(() => {
+      setActiveSection(getActiveSectionId());
+    }, 150);
 
     return () => {
-      if (observer.current) {
-        observer.current.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
       }
+      clearTimeout(initialCheckTimeout);
     };
-  }, [sectionRef]);
+  }, [sectionRef, activeSection, headerHeight]);
 
   return (
     <>
@@ -76,7 +95,7 @@ const AboutNavbar = ({ sectionRef }) => {
           </button>
           <button
             className={`navbar-btn ${
-              activeSection === "edu-section" ? "active" : ""
+              activeSection === "education-section" ? "active" : ""
             }`}
             onClick={() => scrollToId("education-section")}
           >

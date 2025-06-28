@@ -5,69 +5,117 @@ import { projects } from "./Data/projectsData";
 import About from "./Components/About";
 import ContactForm from "./Components/ContactForm";
 import Download from "./Components/Download";
+import Certs from "./Components/Certs";
 import Header from "./Components/Header";
+import Navbar from "./Components/Navbar";
+import AboutNavbar from "./Components/AboutNavbar";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("portfolio");
+  const [hoveredPath, setHoveredPath] = useState(null);
+
+  const handleHoverChange = (path) => {
+    setHoveredPath(path);
+  };
+
+  const profilRef = useRef(null);
+  const jobExperienceRef = useRef(null);
+  const educationRef = useRef(null);
+  const otherRef = useRef(null);
+
+  const sectionRefs = {
+    "profil-section": profilRef,
+    "job-experience-section": jobExperienceRef,
+    "education-section": educationRef,
+    "other-section": otherRef,
+  };
+
+  const location = useLocation();
+  const isAboutPage = location.pathname === "/about";
+
+  useEffect(() => {
+    document.body.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [location.pathname]);
+
   return (
     <>
-      <Router>
-        <Header />
-        <div className="main-content">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="content-wrapper portfolio-wrapper">
-                  <Portfolio />
-                </div>
-              }
-            />
-            <Route
-              path="/portfolio"
-              element={
-                <div className="content-wrapper portfolio-wrapper">
-                  <Portfolio />
-                </div>
-              }
-            />
-            <Route
-              path="/portfolio/:projectId"
-              element={
-                <div className="content-wrapper project-detail-wrapper">
-                  <ProjectDetail allProjects={projects} />
-                </div>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <div className="content-wrapper about-wrapper">
-                  <About />
-                </div>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <div className="content-wrapper contact-wrapper">
-                  <ContactForm />
-                </div>
-              }
-            />
-            <Route
-              path="/downloads"
-              element={
-                <div className="content-wrapper download-wrapper">
-                  <Download />
-                </div>
-              }
-            />
-          </Routes>
-        </div>
-      </Router>
+      <Header hoveredPath={hoveredPath} />
+      <nav className="navbar-wrapper">
+        <Navbar onHoverChange={handleHoverChange} />
+        {isAboutPage && <AboutNavbar sectionRef={sectionRefs} />}
+      </nav>
+      <div className="main-content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="content-wrapper portfolio-wrapper">
+                <Portfolio />
+              </div>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <div className="content-wrapper portfolio-wrapper">
+                <Portfolio />
+              </div>
+            }
+          />
+          <Route
+            path="/portfolio/:projectId"
+            element={
+              <div className="content-wrapper project-detail-wrapper">
+                <ProjectDetail allProjects={projects} />
+              </div>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <div className="content-wrapper about-wrapper">
+                <About
+                  profilRef={profilRef}
+                  jobExperienceRef={jobExperienceRef}
+                  educationRef={educationRef}
+                  otherRef={otherRef}
+                />
+              </div>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <div className="content-wrapper contact-wrapper">
+                <ContactForm />
+              </div>
+            }
+          />
+          <Route
+            path="/certs"
+            element={
+              <div className="content-wrapper certs-wrapper">
+                <Certs />
+              </div>
+            }
+          />
+          <Route
+            path="/downloads"
+            element={
+              <div className="content-wrapper download-wrapper">
+                <Download />
+              </div>
+            }
+          />
+        </Routes>
+      </div>
     </>
   );
 }

@@ -1,7 +1,3 @@
-.navbar-wrapper {
-    width: 100%;
-    margin-top: 0.5rem;
-}
 
 .navbar {
     padding: 0.5rem 1rem;
@@ -60,13 +56,4 @@
 .navbar-btn:active {
     outline: none;
     border: none; 
-}
-
-.about-navbar {
-  position: sticky;
-  top: var(--navbar-height);
-  z-index: 40;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
 }

@@ -81,6 +81,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container">
       <form className="contact-form" onSubmit={handleSubmit}>
+        <h2>Chcete se na něco zeptat?</h2>
         <div className="form-group">
           <label htmlFor="name">Jméno:</label>
           <input

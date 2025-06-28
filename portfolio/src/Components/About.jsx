@@ -1,23 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect } from "react";
 import { cvData } from "../Data/cvData";
-import AboutNavbar from "./AboutNavbar";
+import "./About.css";
 
-const About = () => {
-  const profilRef = useRef(null);
-  const jobXpRef = useRef(null);
-  const eduRef = useRef(null);
-  const otherRef = useRef(null);
-
-  const sectionRef = {
-    "profil-section": profilRef,
-    "job-experience-section": jobXpRef,
-    "education-section": eduRef,
-    "other-section": otherRef,
-  };
-
+const About = ({ profilRef, jobExperienceRef, educationRef, otherRef }) => {
   return (
     <div className="about-container">
-      <AboutNavbar sectionRef={sectionRef} />{" "}
       <div className="about-content">
         {" "}
         <section id="profil-section" ref={profilRef}>
@@ -55,7 +42,7 @@ const About = () => {
           </div>
           <p className="profile-text">Profil: {cvData.profil}</p>{" "}
         </section>
-        <section id="job-experience-section" ref={jobXpRef}>
+        <section id="job-experience-section" ref={jobExperienceRef}>
           {" "}
           <h2>Pracovní zkušenosti:</h2>
           {cvData.jobExperience.map((jobxp, index) => (
@@ -72,7 +59,7 @@ const About = () => {
             </div>
           ))}
         </section>
-        <section id="education-section" ref={eduRef}>
+        <section id="education-section" ref={educationRef}>
           {" "}
           <h2>Vzdělání: </h2>
           {cvData.education.map((info, index) => (

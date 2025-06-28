@@ -2,8 +2,9 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ onHoverChange }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const PortfolioClick = () => {
     navigate("/portfolio");
@@ -21,11 +22,23 @@ const Navbar = () => {
     navigate("/downloads");
   };
 
+  const CertsClick = () => {
+    navigate("/certs");
+  };
+
   const isActive = (path) => {
     if (path == "/" && location.pathname === "/portfolio") {
       return true;
     }
     return location.pathname === path;
+  };
+
+  const handleMouseEnter = (path) => {
+    onHoverChange(path);
+  };
+
+  const handleMouseLeave = () => {
+    onHoverChange(null);
   };
 
   return (
@@ -38,6 +51,8 @@ const Navbar = () => {
           onClick={() => {
             PortfolioClick();
           }}
+          onMouseEnter={() => handleMouseEnter("/portfolio")}
+          onMouseLeave={handleMouseLeave}
         >
           Portfolio
         </button>
@@ -46,6 +61,8 @@ const Navbar = () => {
           onClick={() => {
             AboutClick();
           }}
+          onMouseEnter={() => handleMouseEnter("/about")}
+          onMouseLeave={handleMouseLeave}
         >
           O mě
         </button>
@@ -54,14 +71,28 @@ const Navbar = () => {
           onClick={() => {
             ContactClick();
           }}
+          onMouseEnter={() => handleMouseEnter("/contact")}
+          onMouseLeave={handleMouseLeave}
         >
           Kontakt
+        </button>
+        <button
+          className={`navbar-btn ${isActive("/certs") ? "active" : ""}`}
+          onClick={() => {
+            CertsClick();
+          }}
+          onMouseEnter={() => handleMouseEnter("/certs")}
+          onMouseLeave={handleMouseLeave}
+        >
+          Certifikáty
         </button>
         <button
           className={`navbar-btn ${isActive("/downloads") ? "active" : ""}`}
           onClick={() => {
             DownaloadClick();
           }}
+          onMouseEnter={() => handleMouseEnter("/downloads")}
+          onMouseLeave={handleMouseLeave}
         >
           Ke stažení
         </button>
