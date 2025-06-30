@@ -9,6 +9,7 @@ const ContactForm = () => {
   });
 
   const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -20,27 +21,32 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     e.preventDefault();
     setMessage("");
-    setLoading(true);
+
+    console.log("Stav formData při odeslání:", formData);
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
       !formData.message.trim()
     ) {
       setMessage("Prosím vyplňte všechna pole.");
-      setLoading(false);
+      setMessageType("error");
       return;
     }
     if (!regex.test(formData.email)) {
       setMessage("Zadejte prosím platnou e-mailovou adresu.");
-      setLoading(false);
+      setMessageType("error");
       return;
     }
 
+    setLoading(true);
+
     const emailData = {
-      To: "tiridox@gmail.com",
+      name: formData.name,
+      email: formData.email,
       Subject: `Portfolio - Dotaz od ${formData.name} - ${formData.email}`,
       Body: `
         <h3>Nový dotaz z kontaktního formuláře</h3>
@@ -48,31 +54,53 @@ const ContactForm = () => {
         <p><strong>Email:</strong> ${formData.email}</p>
         <p><strong>Zpráva:</strong></p>
         <p>${formData.message.replace(/\n/g, "<br>")}</p>
-    `,
+      `,
+      message: formData.message,
     };
 
     try {
-      const response = await fetch("https://localhost:7240/api/Email/send", {
+      const response = await fetch("http://portfolio.local/form.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(emailData),
       });
 
-      if (response.ok) {
-        setMessage("Váš dotaz byl úspěšně odeslán!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        const errorData = await response.json();
+      if (!response.ok) {
+        let errorResult;
+        try {
+          errorResult = await response.json();
+        } catch (jsonError) {
+          setMessage(
+            "Chyba při odesílání dotazu: Server vrátil nečitelnou chybovou zprávu."
+          );
+          setMessageType("error");
+          setLoading(false);
+          return;
+        }
+
         setMessage(
-          `Chyba při odesílání dotazu: ${errorData.message || "Neznámá chyba."}`
+          `Chyba při odesílání dotazu: ${
+            errorResult.message || "Neznámá chyba serveru."
+          }`
         );
-        console.error("Chyba z backendu:", errorData);
+        setMessageType("error");
+      } else {
+        const result = await response.json();
+        if (result.success) {
+          setMessage(result.message || "Zpráva byla úspěšně odeslána!");
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          setMessage(
+            `Chyba při odesílání dotazu: ${result.message || "Neznámá chyba."}`
+          );
+          setMessageType("error");
+        }
       }
     } catch (error) {
-      console.error("Došlo k chybě během odesílání dotazu:", error);
       setMessage(
-        "Došlo k neočekávané chybě během odesílání dotazu. Zkuste to prosím znovu."
+        "Chyba při odesílání dotazu: Došlo k neočekávané síťové chybě. Zkuste to prosím znovu."
       );
+      setMessageType("error");
     } finally {
       setLoading(false);
     }
@@ -80,8 +108,13 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-container">
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form role="form" className="contact-form" onSubmit={handleSubmit}>
         <h2>Chcete se na něco zeptat?</h2>
+
+        {message && (
+          <p className={`contact-form-message ${messageType}`}>{message}</p>
+        )}
+
         <div className="form-group">
           <label htmlFor="name">Jméno:</label>
           <input
@@ -92,6 +125,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
+            disabled={loading}
           />
         </div>
         <div className="form-group">
@@ -104,6 +138,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
+            disabled={loading}
           />
         </div>
         <div className="form-group">
@@ -116,22 +151,15 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
+            disabled={loading}
           ></textarea>
-          <button className="btn" type="submit" disabled={loading}>
-            {loading ? "Odesílám..." : "Odeslat "}
-          </button>
         </div>
-        {message && (
-          <p
-            className={`contact-form-message ${
-              message.includes("chyba") ? "error" : "success"
-            }`}
-          >
-            {message}
-          </p>
-        )}
+        <button className="btn" type="submit" disabled={loading}>
+          {loading ? "Odesílám..." : "Odeslat "}
+        </button>
       </form>
     </div>
   );
 };
+
 export default ContactForm;

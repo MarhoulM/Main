@@ -19,28 +19,82 @@ const imageMap = {
 const DynamicImg = ({ hoveredPath }) => {
   const location = useLocation();
   const defaultPlaceholder =
-    "https://placehold.co/192x192/FF6347/FFFFFF?text=Obrázek";
+    "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 
   const [displayedImage, setDisplayedImage] = useState(defaultPlaceholder);
   const [imageOpacity, setImageOpacity] = useState(1);
 
   useEffect(() => {
-    let newImageSrc = "";
+    Object.values(imageMap).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
-    if (hoveredPath) {
-      newImageSrc = imageMap[hoveredPath] || defaultPlaceholder;
-    } else {
-      newImageSrc = imageMap[location.pathname] || defaultPlaceholder;
+  useEffect(() => {
+    let newImageSrc = "";
+    let targetPath = hoveredPath || location.pathname;
+
+    if (location.pathname === "/" || location.pathname === "/portfolio") {
+      if (hoveredPath === "/" || hoveredPath === "/portfolio") {
+        targetPath = "/portfolio";
+      } else if (!hoveredPath) {
+        targetPath = "/portfolio";
+      }
     }
 
-    setImageOpacity(0);
+    newImageSrc = imageMap[targetPath] || defaultPlaceholder;
 
-    const timer = setTimeout(() => {
-      setDisplayedImage(newImageSrc);
+    let skipTransition = false;
+    const isCurrentPathPortfolioLike =
+      location.pathname === "/" || location.pathname === "/portfolio";
+    const isTargetPathPortfolioLike =
+      targetPath === "/" || targetPath === "/portfolio";
+
+    if (hoveredPath !== null) {
+      if (
+        (isCurrentPathPortfolioLike && isTargetPathPortfolioLike) ||
+        targetPath === location.pathname
+      ) {
+        const imageForCurrentLocation =
+          imageMap[location.pathname] ||
+          (isCurrentPathPortfolioLike
+            ? imageMap["/portfolio"]
+            : defaultPlaceholder);
+
+        if (
+          newImageSrc === displayedImage &&
+          displayedImage === imageForCurrentLocation
+        ) {
+          skipTransition = true;
+        }
+      }
+    } else {
+      const imageForCurrentLocation =
+        imageMap[location.pathname] ||
+        (isCurrentPathPortfolioLike
+          ? imageMap["/portfolio"]
+          : defaultPlaceholder);
+      if (displayedImage === imageForCurrentLocation) {
+        skipTransition = true;
+      }
+    }
+
+    if (!skipTransition) {
+      setImageOpacity(0);
+
+      const timer = setTimeout(() => {
+        setDisplayedImage(newImageSrc);
+        setImageOpacity(1);
+      }, 300);
+
+      return () => clearTimeout(timer);
+    } else {
+      if (displayedImage !== newImageSrc) {
+        setDisplayedImage(newImageSrc);
+      }
       setImageOpacity(1);
-    }, 300);
-
-    return () => clearTimeout(timer);
+    }
   }, [location.pathname, hoveredPath]);
 
   return (

@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import sun from "../Images/sun.svg";
+import moon from "../Images/moon.svg";
 
-const Navbar = ({ onHoverChange }) => {
+const Navbar = ({ onHoverChange, theme, toggleTheme }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -95,6 +97,17 @@ const Navbar = ({ onHoverChange }) => {
           onMouseLeave={handleMouseLeave}
         >
           Ke stažení
+        </button>
+        <button
+          className="navbar-btn theme-toggle-btn"
+          onClick={toggleTheme}
+          aria-label="Přepnout světlý/tmavý režim"
+        >
+          {theme === "light" ? (
+            <img className="theme-icon" src={moon} alt="Moon icon" />
+          ) : (
+            <img className="theme-icon" src={sun} alt="Sun icon" />
+          )}
         </button>
       </div>
     </nav>

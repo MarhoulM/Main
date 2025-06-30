@@ -13,7 +13,8 @@
 .about-navbar {
   position: sticky;
   top: 0;
-  background-color: #242424;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   z-index: 40;
   height: 37px;
   display: flex;

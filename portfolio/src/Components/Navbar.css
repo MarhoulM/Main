@@ -3,6 +3,8 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     padding-bottom: 0.5rem;
+    background-color: var(--background-color-body);
+    color: var(--primary-text-color);
 }
 
 .navbar-links {
@@ -15,7 +17,8 @@
 
 .navbar-btn {
     position: relative;
-    color: white;
+    background-color: var(--background-color-body);
+    color: var(--main-text-color);
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
@@ -56,4 +59,9 @@
 .navbar-btn:active {
     outline: none;
     border: none; 
+}
+
+.theme-icon{
+    width: 20px;
+    height: 20px;
 }

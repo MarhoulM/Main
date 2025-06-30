@@ -2,7 +2,8 @@
   max-width: 600px;
   width: 100%;
   padding: 30px;
-  background-color: #333;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -21,7 +22,7 @@
 .contact-form label {
   text-align: left;
   font-weight: 600;
-  color: #fff;
+  color: var(--main-text-color);
   font-size: 1rem;
   margin-bottom: 0;
 }
@@ -31,11 +32,11 @@
 .contact-form textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--input-border-color);
   border-radius: 8px;
   font-size: 1rem;
-  color: #333;
-  background-color: #f8f8f8;
+  background-color: var(--input-background-color);
+  color: var(--primary-text-color);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -44,7 +45,6 @@
   outline: none;
   border-color: #4a90e2;
   box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2);
-  background-color: #fff;
 }
 
 .contact-form textarea {
@@ -54,7 +54,7 @@
 
 .btn-submit {
   background-color: #4a90e2;
-  color: white;
+  color: var(--main-text-color);
   padding: 14px 25px;
   border-radius: 8px;
   border: none;

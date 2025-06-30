@@ -17,8 +17,21 @@ function App() {
   const [activeSection, setActiveSection] = useState("portfolio");
   const [hoveredPath, setHoveredPath] = useState(null);
 
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
   const handleHoverChange = (path) => {
     setHoveredPath(path);
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   const profilRef = useRef(null);
@@ -48,7 +61,11 @@ function App() {
     <>
       <Header hoveredPath={hoveredPath} />
       <nav className="navbar-wrapper">
-        <Navbar onHoverChange={handleHoverChange} />
+        <Navbar
+          onHoverChange={handleHoverChange}
+          theme={theme}
+          toggleTheme={toggleTheme}
+        />
         {isAboutPage && <AboutNavbar sectionRef={sectionRefs} />}
       </nav>
       <div className="main-content">
