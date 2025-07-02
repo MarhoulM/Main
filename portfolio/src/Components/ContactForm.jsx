@@ -88,6 +88,7 @@ const ContactForm = () => {
         const result = await response.json();
         if (result.success) {
           setMessage(result.message || "Zpráva byla úspěšně odeslána!");
+          setMessageType("success");
           setFormData({ name: "", email: "", message: "" });
         } else {
           setMessage(

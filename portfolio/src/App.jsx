@@ -4,7 +4,7 @@ import ProjectDetail from "./Components/ProjectDetail";
 import { projects } from "./Data/projectsData";
 import About from "./Components/About";
 import ContactForm from "./Components/ContactForm";
-import Download from "./Components/Download";
+import Source from "./Components/Source";
 import Certs from "./Components/Certs";
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
@@ -124,10 +124,10 @@ function App() {
             }
           />
           <Route
-            path="/downloads"
+            path="/sources"
             element={
-              <div className="content-wrapper download-wrapper">
-                <Download />
+              <div className="content-wrapper source-wrapper">
+                <Source />
               </div>
             }
           />

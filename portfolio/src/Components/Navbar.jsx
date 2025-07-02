@@ -20,8 +20,8 @@ const Navbar = ({ onHoverChange, theme, toggleTheme }) => {
     navigate("/contact");
   };
 
-  const DownaloadClick = () => {
-    navigate("/downloads");
+  const SourceClick = () => {
+    navigate("/sources");
   };
 
   const CertsClick = () => {
@@ -89,14 +89,14 @@ const Navbar = ({ onHoverChange, theme, toggleTheme }) => {
           Certifikáty
         </button>
         <button
-          className={`navbar-btn ${isActive("/downloads") ? "active" : ""}`}
+          className={`navbar-btn ${isActive("/sources") ? "active" : ""}`}
           onClick={() => {
-            DownaloadClick();
+            SourceClick();
           }}
-          onMouseEnter={() => handleMouseEnter("/downloads")}
+          onMouseEnter={() => handleMouseEnter("/sources")}
           onMouseLeave={handleMouseLeave}
         >
-          Ke stažení
+          Zdroje
         </button>
         <button
           className="navbar-btn theme-toggle-btn"

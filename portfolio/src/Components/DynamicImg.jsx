@@ -13,7 +13,7 @@ const imageMap = {
   "/about": aboutImg,
   "/contact": contactImg,
   "/certs": certificateImg,
-  "/downloads": downloadImg,
+  "/sources": downloadImg,
 };
 
 const DynamicImg = ({ hoveredPath }) => {

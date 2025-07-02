@@ -20,10 +20,10 @@ const ProjectDetail = ({ allProjects }) => {
             </p>
           ))}
         </div>
-        <p className="download">
-          Stáhnout:{" "}
-          <a href="soubor-location" download={project.download}>
-            {project.download}
+        <p className="source">
+          Zdroj:{" "}
+          <a href="soubor-location" source={project.source}>
+            {project.source}
           </a>
         </p>
         <p className="project-detailDescription">{project.detailDescription}</p>

@@ -11,7 +11,7 @@ const Portfolio = () => {
             <img
               src={project.img}
               alt={project.name}
-              className="project-iamge"
+              className="project-image"
             />
             <h2 className="project-name">{project.name}</h2>
             <p className="project-description">{project.description}</p>
