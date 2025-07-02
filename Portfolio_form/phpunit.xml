@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+             bootstrap="vendor/autoload.php"
+             colors="true"
+             cacheResult="false"
+    >
+        <testsuites>
+            <testsuite name="Application">
+                <directory>tests</directory> 
+            </testsuite>
+        </testsuites>
+
+        <php>
+            <env name="SMTP_HOST" value="test.smtp.com"/>
+            <env name="SMTP_USERNAME" value="test@example.com"/>
+            <env name="SMTP_PASSWORD" value="testpassword"/>
+            <env name="SMTP_PORT" value="465"/>
+        </php>
+
+        <coverage processUncoveredFiles="true">
+            <include>
+                 <directory suffix=".php">./</directory>
+            </include>
+            <exclude>
+                <directory>./vendor</directory>
+                <directory>./tests</directory>
+                <file>./Form.php</file>
+            </exclude>
+        </coverage>
+    </phpunit>
