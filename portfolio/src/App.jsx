@@ -90,7 +90,7 @@ function App() {
             path="/portfolio/:projectId"
             element={
               <div className="content-wrapper project-detail-wrapper">
-                <ProjectDetail allProjects={projects} />
+                <ProjectDetail theme={theme} allProjects={projects} />
               </div>
             }
           />

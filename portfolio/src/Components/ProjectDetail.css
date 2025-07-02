@@ -1,0 +1,10 @@
+.project-detail-container{
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.project-detail-container .btn {
+    align-self: center;
+}

@@ -1,0 +1,29 @@
+.source-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+  margin: 0 auto; 
+}
+
+.source-items {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%; 
+}
+
+.source p, .source a { 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    word-break: break-all; 
+    text-align: left; 
+}
+
+.source {
+  font-weight: 500;
+    align-self: flex-start;
+    width: 100%; 
+    margin-bottom: 1rem;
+}

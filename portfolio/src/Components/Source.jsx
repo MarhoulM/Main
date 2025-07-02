@@ -1,11 +1,14 @@
 import React from "react";
 import { projects } from "../Data/projectsData";
+import cvPdf from "../Data/CV_Michal Marhoul.pdf";
+import "./Source.css";
+
 const Source = () => {
   return (
     <div className="source-container">
       <h2>Ke stažení:</h2>
       <div className="cv-container">
-        <a href="soubor-location" /*source="/...."*/>
+        <a href={cvPdf} download="CV_Michal_Marhoul.pdf">
           <h2>CV - Ing. Michal Marhoul</h2>
         </a>
       </div>
@@ -13,6 +16,7 @@ const Source = () => {
       {projects.map((project) => (
         <div key={project.id} className="source">
           <h3 className="project-name">{project.name}</h3>
+          <p className="project-description">{project.description}</p>
           <div className="category">
             {project.category.map((cat) => (
               <p key={cat.css} className={`${cat.css}`}>
@@ -20,12 +24,23 @@ const Source = () => {
               </p>
             ))}
           </div>
-          <p className="source">
-            Zdroj:{" "}
-            <a href="soubor-location" source={project.source}>
-              {project.source}
-            </a>
-          </p>
+          <p className="source-label">Zdroj:</p>
+          <div className="project-links-wrapper">
+            {project.source &&
+              project.source.split("\n").map((url, index) => (
+                <a
+                  key={index}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-item"
+                >
+                  {project.name === "Portfolio"
+                    ? `Odkaz na GitHub (Část ${index + 1})   `
+                    : "Odkaz na GitHub"}
+                </a>
+              ))}
+          </div>
         </div>
       ))}
     </div>

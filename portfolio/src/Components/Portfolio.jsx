@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../Data/projectsData";
+import "./Portfolio.css";
 
 const Portfolio = () => {
   return (
@@ -9,7 +10,7 @@ const Portfolio = () => {
         <div key={project.id} className="project-card">
           <Link to={`/portfolio/${project.id}`}>
             <img
-              src={project.img}
+              src={project.img[0]}
               alt={project.name}
               className="project-image"
             />

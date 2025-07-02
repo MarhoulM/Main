@@ -1,4 +1,11 @@
 import mm from '../Images/meetmeat.png';
+import mm1 from '../Images/meetmeat11.png';
+import mm2 from '../Images/meetmeat2.png';
+import mm22 from '../Images/meetmeat22.png';
+import mm3 from '../Images/meetmeat3.png';
+import mm33 from '../Images/meetmeat33.png';
+import mm4 from '../Images/meetmeat4.png';
+import mm44 from '../Images/meetmeat44.png';
 import mmA from '../Images/mmA.png';
 import pf from '../Images/portfolio.png';
 import tdl from '../Images/tdl.png';
@@ -20,7 +27,7 @@ export const projects = [
         { display: "HTML", css: "html" },
         { display: "CSS", css: "css" },
       ],
-      img: mm ,
+      img:[ mm, mm1, mm2, mm22, mm3, mm33, mm4, mm44 ],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/meetmeat",
     },
     {
@@ -35,7 +42,7 @@ export const projects = [
         { display: "Swagger", css: "swagger" },
         { display: "MySQL", css: "mysql" },
       ],
-      img: mmA,
+      img:[ mmA],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/meetmeatApi/meetmeatApi",
     },
     {
@@ -52,7 +59,7 @@ export const projects = [
         { display: "CSS", css: "css" },
         { display: "PHP", css: "php" },
       ],
-      img: pf,
+      img:[ pf],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/portfolio\nhttps://github.com/MarhoulM/Main/tree/59f8be575881ab38ac8a6ad9ab7fbcad2fc83e6b/Portfolio_form",
     },
     {
@@ -65,7 +72,7 @@ export const projects = [
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
       ],
-      img: tdl,
+      img:[ tdl],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/To_do_list",
     },
     {
@@ -78,7 +85,7 @@ export const projects = [
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
       ],
-      img: cv,
+      img:[ cv],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/CV%20-%20C%23%20console",
     },
     {
@@ -91,7 +98,7 @@ export const projects = [
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
       ],
-      img: cmy,
+      img:[ cmy],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/C%23_with_MySQL_Database",
     },
           {
@@ -105,7 +112,7 @@ export const projects = [
         { display: ".NET 8", css: "dotnet8" },
         { display: "Blazor", css: "blazor" },
       ],
-      img: cp,
+      img:[ cp],
       source: "https://github.com/MarhoulM/Main/tree/fcd1d34752ce44a1f925ad3eb8313cc042a2ccf5/ContosoPizza",
     },
   ];

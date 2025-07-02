@@ -1,12 +1,12 @@
 export const cvData = {
     name: "Ing. Michal Marhoul",
     contacts: ["Telefon: +420 723 028 376",  "E-mail: marhoul.m@seznam.cz", "LinkedIn: www.linkedin.com/in/michal-marhoul-223440132", "GitHub:https://github.com/MarhoulM/Main.git"],
-    profil: "Při zprovozňování zařízení v zahraničí se jako PLC programátor často musím spolehnout hlavně na sebe a svůj úsudek. Když k tomu přidám odhodlání dotáhnout věci do konce, dostanete přesně mě.",
+    profil: "Jako PLC programátor jsem získal cenné zkušenosti s uváděním zařízení do provozu v mezinárodním prostředí, což vyžadovalo vysokou míru samostatnosti a schopnost řešení problémů. Nyní se zaměřuji na rozvoj v oblasti C#, JavaScriptu a Reactu, kde se snažím rozšiřovat své znalosti a hledám příležitosti pro uplatnění v moderním softwarovém vývoji.",
     jobExperience: [
         {
             position: "PLC PROGRAMÁTOR",
             company: "CENTEC AUTOMATIKA, SPOL. S R.O. / PRAHA",
-            duration: "Červenec 2022 – duben 2025",
+            duration: "Červenec 2022 – Duben 2025",
             jobDescription: ["Programování řídících systémů Siemens (STL) včetně vizualizace","Vytváření programů pro řídicí systémy na základě elektrotechnických plánů a funkčních specifikací","Zprovoznění zařízení u zákazníka (kontrola vstupů a výstupů (IO), nastavení a úprava regulačních prvků, řešení mechanických, elektrických a technologických problémů, školení personálu)","Tvorba operačního manuálu","Práce na mezinárodních projektech (pravidelné zahraniční cesty) "]
         },
         {
