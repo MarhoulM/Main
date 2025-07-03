@@ -59,7 +59,7 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await fetch("http://portfolio.local/form.php", {
+      const response = await fetch(`${API_BASE_URL}/Form.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(emailData),
