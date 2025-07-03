@@ -6,10 +6,17 @@ WORKDIR /var/www/html
 
 COPY . /var/www/html
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-RUN composer install --no-dev --optimize-autoloader
+RUN php -v
 
-# Povolíme mod_rewrite pro hezké URL, pokud je váš PHP framework potřebuje
+RUN ls -la /var/www/html
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+RUN rm -rf vendor/
+
+RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev
+
+
 RUN a2enmod rewrite
 
 EXPOSE 80
