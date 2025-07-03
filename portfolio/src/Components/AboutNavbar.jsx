@@ -4,74 +4,50 @@ import "./About.css";
 
 const AboutNavbar = ({ sectionRef }) => {
   const [activeSection, setActiveSection] = useState("profil-section");
-  const scrollTimeout = useRef(null);
-
-  const headerHeight = 92;
 
   const scrollToId = useCallback((id) => {
     const section = document.getElementById(id);
     if (section) {
-      setActiveSection(id);
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, []);
 
   useEffect(() => {
-    const getActiveSectionId = () => {
-      let currentActive = "profil-section";
-      let minDistanceFromTop = Infinity;
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
 
-      Object.values(sectionRef).forEach((ref) => {
-        if (ref.current) {
-          const section = ref.current;
-          const rect = section.getBoundingClientRect();
-          const id = section.id;
-
-          const sectionTopRelativeToViewport = rect.top;
-
-          if (
-            sectionTopRelativeToViewport <= headerHeight + 5 &&
-            sectionTopRelativeToViewport > -section.offsetHeight
-          ) {
-            const distanceFromHeader = Math.abs(
-              sectionTopRelativeToViewport - headerHeight
-            );
-            if (distanceFromHeader < minDistanceFromTop) {
-              minDistanceFromTop = distanceFromHeader;
-              currentActive = id;
-            }
-          }
+    const observerCallback = (entries) => {
+      let mostVisible = null;
+      let maxRatio = 0;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio;
+          mostVisible = entry.target.id;
         }
       });
-      return currentActive;
-    };
-
-    const handleScroll = () => {
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
+      if (mostVisible) {
+        setActiveSection(mostVisible);
       }
-      scrollTimeout.current = setTimeout(() => {
-        const newActive = getActiveSectionId();
-        if (newActive !== activeSection) {
-          setActiveSection(newActive);
-        }
-      }, 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const observer = new window.IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
-    const initialCheckTimeout = setTimeout(() => {
-      setActiveSection(getActiveSectionId());
-    }, 150);
+    Object.values(sectionRef).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
-      clearTimeout(initialCheckTimeout);
+      observer.disconnect();
     };
-  }, [sectionRef, activeSection, headerHeight]);
+  }, [sectionRef]);
 
   return (
     <>

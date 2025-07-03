@@ -1,17 +1,41 @@
-import mm from '../Images/meetmeat.png';
-import mm1 from '../Images/meetmeat11.png';
-import mm2 from '../Images/meetmeat2.png';
-import mm22 from '../Images/meetmeat22.png';
-import mm3 from '../Images/meetmeat3.png';
-import mm33 from '../Images/meetmeat33.png';
-import mm4 from '../Images/meetmeat4.png';
-import mm44 from '../Images/meetmeat44.png';
-import mmA from '../Images/mmA.png';
-import pf from '../Images/portfolio.png';
+import mm from '../Images/mm.png';
+import mm1 from '../Images/mm1.png';
+import mm2 from '../Images/mm2.png';
+import mm21 from '../Images/mm21.png';
+import mm3 from '../Images/mm3.png';
+import mm31 from '../Images/mm31.png';
+import mm4 from '../Images/mm4.png';
+import mm41 from '../Images/mm41.png';
+import mma from '../Images/mma.png';
+import mma1 from '../Images/mma1.png';
+import mma2 from '../Images/mma2.png';
+import mma3 from '../Images/mma3.png';
+import mma4 from '../Images/mma4.png';
+import mma5 from '../Images/mma5.png';
+import mma6 from '../Images/mma6.png';
+import mma7 from '../Images/mma7.png';
+import pf from '../Images/pf.png';
+import pf12 from '../Images/pf12.png';
+import pf2 from '../Images/pf2.png';
+import pf21 from '../Images/pf21.png';
+import pf3 from '../Images/pf3.png';
+import pf4 from '../Images/pf4.png';
+import pf41 from '../Images/pf41.png';
+import pff from '../Images/pff.png';
 import tdl from '../Images/tdl.png';
+import tdl1 from '../Images/tdl1.png';
+import tdl2 from '../Images/tdl2.png';
+import tdl3 from '../Images/tdl3.png';
+import tdl4 from '../Images/tdl4.png';
 import cv from '../Images/cv.png';
-import cmy from '../Images/cSMySql.png';
-import cp from '../Images/ContosoPizza.png';
+import cv1 from '../Images/cv1.png';
+import cmy from '../Images/cmy.png';
+import cmy1 from '../Images/cmy1.png';
+import cp from '../Images/cp.png';
+import cp1 from '../Images/cp1.png';
+import cp2 from '../Images/cp2.png';
+import cp3 from '../Images/cp3.png';
+
 
 export const projects = [
     {
@@ -27,7 +51,7 @@ export const projects = [
         { display: "HTML", css: "html" },
         { display: "CSS", css: "css" },
       ],
-      img:[ mm, mm1, mm2, mm22, mm3, mm33, mm4, mm44 ],
+      img:[ mm, mm1, mm2, mm21, mm3, mm31, mm4, mm41 ],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/meetmeat",
     },
     {
@@ -42,7 +66,7 @@ export const projects = [
         { display: "Swagger", css: "swagger" },
         { display: "MySQL", css: "mysql" },
       ],
-      img:[ mmA],
+      img:[ mma, mma1, mma2, mma3, mma4, mma5, mma6, mma7],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/meetmeatApi/meetmeatApi",
     },
     {
@@ -59,7 +83,7 @@ export const projects = [
         { display: "CSS", css: "css" },
         { display: "PHP", css: "php" },
       ],
-      img:[ pf],
+      img:[ pf, pf12, pf2, pf21, pf3, pf4, pf41, pff],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/portfolio\nhttps://github.com/MarhoulM/Main/tree/59f8be575881ab38ac8a6ad9ab7fbcad2fc83e6b/Portfolio_form",
     },
     {
@@ -72,7 +96,7 @@ export const projects = [
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
       ],
-      img:[ tdl],
+      img:[ tdl, tdl1, tdl2, tdl3, tdl4 ],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/To_do_list",
     },
     {
@@ -85,7 +109,7 @@ export const projects = [
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
       ],
-      img:[ cv],
+      img:[ cv, cv1],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/CV%20-%20C%23%20console",
     },
     {
@@ -98,7 +122,7 @@ export const projects = [
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
       ],
-      img:[ cmy],
+      img:[ cmy, cmy1],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/C%23_with_MySQL_Database",
     },
           {
@@ -112,7 +136,7 @@ export const projects = [
         { display: ".NET 8", css: "dotnet8" },
         { display: "Blazor", css: "blazor" },
       ],
-      img:[ cp],
+      img:[ cp, cp1, cp2, cp3],
       source: "https://github.com/MarhoulM/Main/tree/fcd1d34752ce44a1f925ad3eb8313cc042a2ccf5/ContosoPizza",
     },
   ];

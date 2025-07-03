@@ -35,8 +35,14 @@ const DynamicImg = ({ hoveredPath }) => {
     let newImageSrc = "";
     let targetPath = hoveredPath || location.pathname;
 
-    if (location.pathname === "/" || location.pathname === "/portfolio") {
-      if (hoveredPath === "/" || hoveredPath === "/portfolio") {
+    if (
+      location.pathname === "/" ||
+      location.pathname.startsWith("/portfolio")
+    ) {
+      if (
+        hoveredPath === "/" ||
+        (hoveredPath && hoveredPath.startsWith("/portfolio"))
+      ) {
         targetPath = "/portfolio";
       } else if (!hoveredPath) {
         targetPath = "/portfolio";
@@ -47,9 +53,9 @@ const DynamicImg = ({ hoveredPath }) => {
 
     let skipTransition = false;
     const isCurrentPathPortfolioLike =
-      location.pathname === "/" || location.pathname === "/portfolio";
+      location.pathname === "/" || location.pathname.startsWith("/portfolio");
     const isTargetPathPortfolioLike =
-      targetPath === "/" || targetPath === "/portfolio";
+      targetPath === "/" || targetPath.startsWith("/portfolio");
 
     if (hoveredPath !== null) {
       if (

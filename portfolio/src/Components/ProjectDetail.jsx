@@ -35,7 +35,7 @@ const ProjectDetail = ({ allProjects, theme }) => {
                 className="project-link-item"
               >
                 {project.name === "Portfolio"
-                  ? "Odkaz na Portfolio (GitHub)   "
+                  ? `Odkaz na GitHub (Část ${index + 1})   `
                   : "Odkaz na GitHub"}
               </a>
             ))}
