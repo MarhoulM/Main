@@ -1,0 +1,11 @@
+# Povolit CORS pro konkrétní doménu frontendu
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "https://portfolio-g26i.onrender.com"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ Form.php [L,QSA]
