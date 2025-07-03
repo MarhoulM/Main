@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
