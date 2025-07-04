@@ -29,8 +29,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN rm -rf vendor/
 
 RUN COMPOSER_ALLOW_SUPERUSER=1 COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev
-
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
-
+RUN a2enmod headers
 
 EXPOSE 80
