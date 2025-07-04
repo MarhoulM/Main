@@ -121,6 +121,7 @@ export const projects = [
         { display: "C#", css: "csharp" },
         { display: "VS Code", css: "vscode" },
         { display: ".NET 9", css: "dotnet9" },
+        { display: "MySQL", css: "mysql" },
       ],
       img:[ cmy, cmy1],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/C%23_with_MySQL_Database",
