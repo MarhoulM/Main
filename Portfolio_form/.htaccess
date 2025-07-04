@@ -5,6 +5,10 @@
     Header set Access-Control-Allow-Headers "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
 </IfModule>
 
+<FilesMatch "\.php$">
+    Header set Content-Type "application/json; charset=UTF-8"
+</FilesMatch>
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
