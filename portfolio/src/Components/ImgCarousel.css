@@ -3,6 +3,10 @@
     justify-content: center;
     flex-direction: column; 
     align-items: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .carousel-image-wrapper {
@@ -38,11 +42,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; 
+    padding: 0 4px;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .carousel-nav-button{
     background-color: var(--background-color-body);
     color: var(--primary-text-color);
+}
+
+.arrow-icon,
+.circle-icon {
+    height: 16px;
+    width: 16px; 
+    vertical-align: middle; 
 }
 
 .carousel-dot {
@@ -52,8 +67,9 @@
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    transition: transform 0.3s ease;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .carousel-dot.active::after {
@@ -89,4 +105,35 @@
 .carousel-dot:active {
     outline: none;
     border: none; 
+}
+
+
+@media (min-width: 640px) {
+    .nav-button-container {
+        padding: 0 8px; 
+        gap: 4px; 
+    }
+    .carousel-nav-button {
+        padding: 12px; 
+    }
+    .arrow-icon,
+    .circle-icon {
+        height: 24px; 
+        width: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-button-container {
+        padding: 0 16px; 
+        gap: 8px; 
+    }
+    .carousel-nav-button {
+        padding: 16px; /
+    }
+    .arrow-icon,
+    .circle-icon {
+        height: 32px; 
+        width: 32px;
+    }
 }
