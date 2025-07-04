@@ -1,12 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
+WORKDIR /src/app
 
-COPY ["meetmeatApi/meetmeatApi.csproj", "meetmeatApi/"]
-RUN dotnet restore "meetmeatApi/meetmeatApi.csproj"
+COPY meetmeatApi.csproj .
+RUN dotnet restore
 
-COPY . /src/meetmeatApi
-WORKDIR "/src/meetmeatApi"
-
+COPY . .
 
 RUN dotnet publish "meetmeatApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
