@@ -92,11 +92,13 @@ public partial class Program
             });
         });
 
+        var frontendUrl = builder.Configuration["Cors:FrontendUrl"] ?? "https://meetmeat.onrender.com";
+
         builder.Services.AddCors(options =>
         {
             options.AddPolicy("FrontendCorsPolicy",
                 builder => builder
-                    .WithOrigins("https://localhost:8443") 
+                    .WithOrigins(frontendUrl) 
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
