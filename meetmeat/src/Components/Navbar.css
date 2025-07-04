@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 5px;
     width: 100%;
     background-color: #333;
     color: white;
@@ -11,23 +11,25 @@
 .search{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2.5px;
 }
 .search-input{
   height: 30px;
   border-radius: 5px;
    border: 1px solid #ccc;
-    padding: 5px 10px;         
-    min-width: 180px;          
-    flex-grow: 1;   
+    padding: 5px 5px;         
+    min-width: 0;
+    width: 100%; 
+    flex-grow: 1;
+    box-sizing: border-box;  
 }
 .search-btn{
     line-height: 0.5;
     white-space: nowrap;
     width: auto;
     height: 30px;
-    padding: 8px 15px; 
-   background-color: white;                
+    padding: 8px 5px; 
+    background-color: white;                
     border: none;
     border-radius: 5px;       
     cursor: pointer;
@@ -53,6 +55,5 @@
 }
 .right-side{
     display: flex;
-    gap: 10px;
     align-items: center;
 }
