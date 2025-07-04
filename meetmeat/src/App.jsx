@@ -182,14 +182,6 @@ function App() {
                 >
                   <h2>Chyba při načítání produktů</h2>
                   <p>Došlo k chybě: {error}</p>
-                  <p>
-                    Zkontrolujte, zda je MeetMeatApi spuštěné a dostupné na{" "}
-                    <strong>https://localhost:7240</strong>.
-                  </p>
-                  <p>
-                    Také se ujistěte, že je správně nastavena CORS politika v
-                    backendu pro <strong>https://localhost:8443</strong>.
-                  </p>
                 </div>
               )}
 

@@ -3,6 +3,8 @@ import { useCart } from "./CartContext";
 import React from "react";
 import { Link } from "react-router-dom";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const ProductCard = ({ products }) => {
   const { addToCart } = useCart();
 
@@ -22,7 +24,7 @@ const ProductCard = ({ products }) => {
             <div className="product-content">
               <Link to={`/products/${item.id}`}>
                 <img
-                  src={item.imageUrl || item.ImageUrl}
+                  src={`${API_BASE_URL}${item.imageUrl || item.ImageUrl}`}
                   alt={item.name}
                   className="product-image"
                 />

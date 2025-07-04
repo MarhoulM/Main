@@ -3,6 +3,8 @@ import { useCart } from "./CartContext";
 import "./ProductDetail.css";
 import { useParams, useNavigate } from "react-router-dom";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const ProductDetail = ({ allProducts }) => {
   const { productId } = useParams();
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ const ProductDetail = ({ allProducts }) => {
     <>
       <div className="product-detail-container">
         <img
-          src={product.imageUrl}
+          src={`${API_BASE_URL}${product.imageUrl}`}
           alt={product.name}
           className="product-detail-image"
         />

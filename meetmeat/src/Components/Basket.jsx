@@ -3,6 +3,8 @@ import { useCart } from "./CartContext";
 import "./Basket.css";
 import { useNavigate } from "react-router-dom";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const Basket = () => {
   const { cartItems, removeFromCart, getTotalItems, updateQuantity } =
     useCart();
@@ -36,7 +38,7 @@ const Basket = () => {
             {cartItems.map((item) => (
               <div key={item.id} className="basket-item">
                 <img
-                  src={item.imageUrl}
+                  src={`${API_BASE_URL}${item.imageUrl}`}
                   alt={item.name}
                   className="basket-item-image"
                 />
