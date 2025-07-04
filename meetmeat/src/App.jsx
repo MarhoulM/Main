@@ -55,7 +55,9 @@ function App() {
         params.append("maxPrice", queryParams.maxPrice);
       if (queryParams.orderBy) params.append("orderBy", queryParams.orderBy);
 
-      const url = `https://localhost:7240/api/products?${params.toString()}`;
+      const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
+      const url = `${API_BASE_URL}/api/products?${params.toString()}`;
       console.log("Fetching from URL:", url);
 
       const response = await fetch(url);
