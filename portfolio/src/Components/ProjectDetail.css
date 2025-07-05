@@ -10,3 +10,8 @@
 .project-detail-container .btn {
     align-self: center;
 }
+
+.project-link-item {
+  display: inline-block; 
+  margin-right: 5px; 
+}
