@@ -3,6 +3,8 @@ import { useCart } from "./CartContext";
 import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const Checkout = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -85,7 +87,7 @@ const Checkout = () => {
         requestHeaders["Authorization"] = `Bearer ${token}`;
       }
 
-      const response = await fetch("https://localhost:7240/api/Order/create", {
+      const response = await fetch(`${API_BASE_URL}/api/Order/create`, {
         method: "POST",
         headers: requestHeaders,
         body: JSON.stringify(orderData),

@@ -3,6 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import "./MyOrders.css";
 import Loader from "./Loader";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,15 +29,12 @@ const MyOrders = () => {
           return;
         }
 
-        const response = await fetch(
-          "https://localhost:7240/api/Order/my-orders",
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await fetch(`${API_BASE_URL}/api/Order/my-orders`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         if (response.ok) {
           const data = await response.json();
