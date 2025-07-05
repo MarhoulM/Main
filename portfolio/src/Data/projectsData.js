@@ -53,6 +53,7 @@ export const projects = [
       ],
       img:[ mm, mm1, mm2, mm21, mm3, mm31, mm4, mm41 ],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/meetmeat",
+      deploy: ["https://meetmeat.onrender.com"],
     },
     {
       id: 2,
@@ -68,6 +69,7 @@ export const projects = [
       ],
       img:[ mma, mma1, mma2, mma3, mma4, mma5, mma6, mma7],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/meetmeatApi/meetmeatApi",
+      deploy: ["https://meetmeatapi.onrender.com"],
     },
     {
       id: 3,
@@ -85,6 +87,7 @@ export const projects = [
       ],
       img:[ pf, pf12, pf2, pf21, pf3, pf4, pf41, pff],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/portfolio\nhttps://github.com/MarhoulM/Main/tree/59f8be575881ab38ac8a6ad9ab7fbcad2fc83e6b/Portfolio_form",
+      deploy: ["https://portfolio-g26i.onrender.com", "https://portfolio-be-mla8.onrender.com"],
     },
     {
       id: 4,
@@ -98,6 +101,7 @@ export const projects = [
       ],
       img:[ tdl, tdl1, tdl2, tdl3, tdl4 ],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/To_do_list",
+      deploy: [],
     },
     {
       id: 5,
@@ -111,6 +115,7 @@ export const projects = [
       ],
       img:[ cv, cv1],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/CV%20-%20C%23%20console",
+      deploy: [],
     },
     {
       id: 6,
@@ -125,6 +130,7 @@ export const projects = [
       ],
       img:[ cmy, cmy1],
       source: "https://github.com/MarhoulM/Main/tree/5c515a306a9f0216db3397821574ea7ad9f44681/C%23_with_MySQL_Database",
+      deploy: [],
     },
           {
       id: 7,
@@ -139,5 +145,6 @@ export const projects = [
       ],
       img:[ cp, cp1, cp2, cp3],
       source: "https://github.com/MarhoulM/Main/tree/fcd1d34752ce44a1f925ad3eb8313cc042a2ccf5/ContosoPizza",
+      deploy: [],
     },
   ];

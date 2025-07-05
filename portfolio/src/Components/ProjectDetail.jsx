@@ -40,6 +40,24 @@ const ProjectDetail = ({ allProjects, theme }) => {
               </a>
             ))}
         </div>
+        <div className="project-links-wrapper">
+          {project.deploy && project.deploy.length > 0 ? (
+            <>
+              <p className="deploy-label">Nasazení:</p>
+              {project.deploy.map((deployUrl, index) => (
+                <a
+                  key={index}
+                  href={deployUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-item"
+                >
+                  {deployUrl}
+                </a>
+              ))}
+            </>
+          ) : null}
+        </div>
         <p className="project-detailDescription">{project.detailDescription}</p>
         <button className="btn" onClick={() => navigate(-1)}>
           Zpět na portfolio
