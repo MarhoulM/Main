@@ -27,12 +27,6 @@ namespace meetmeatApi.Services
             }
 
 
-            if (await context.Products.AnyAsync())
-            {
-                logger.LogInformation("DbInitializer: Database already contains products. Skipping seeding.");
-                return;
-            }
-
             logger.LogInformation("DbInitializer: Seeding products...");
 
             var products = new List<Product>
@@ -228,7 +222,45 @@ namespace meetmeatApi.Services
                     }
                 }
             };
-            context.Products.AddRange(products);
+
+            foreach (var productToSeed in products)
+            {
+ 
+                var existingProduct = await context.Products.FindAsync(productToSeed.Id);
+
+                if (existingProduct == null)
+                {
+                    context.Products.Add(productToSeed);
+                    logger.LogInformation($"DbInitializer: Přidán nový produkt: {productToSeed.Name}");
+                }
+                else
+                {
+                    existingProduct.Name = productToSeed.Name;
+                    existingProduct.Price = productToSeed.Price;
+                    existingProduct.Currency = productToSeed.Currency;
+                    existingProduct.ImageUrl = productToSeed.ImageUrl;
+                    existingProduct.Description = productToSeed.Description;
+                    existingProduct.Category = productToSeed.Category;
+
+  
+                    if (existingProduct.DetailDescription == null)
+                    {
+                        existingProduct.DetailDescription = productToSeed.DetailDescription;
+                    }
+                    else
+                    {
+                        existingProduct.DetailDescription.MeatType = productToSeed.DetailDescription.MeatType;
+                        existingProduct.DetailDescription.Process = productToSeed.DetailDescription.Process;
+                        existingProduct.DetailDescription.Weight = productToSeed.DetailDescription.Weight;
+                        existingProduct.DetailDescription.Nutrition = productToSeed.DetailDescription.Nutrition;
+                        existingProduct.DetailDescription.Origin = productToSeed.DetailDescription.Origin;
+                        existingProduct.DetailDescription.ShelfLife = productToSeed.DetailDescription.ShelfLife;
+                    }
+
+                    context.Products.Update(existingProduct); 
+                    logger.LogInformation($"DbInitializer: Aktualizován existující produkt: {productToSeed.Name}");
+                }
+            }
             await context.SaveChangesAsync();
             logger.LogInformation("DbInitializer: Products seeded successfully.");
         }

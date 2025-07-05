@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F34AC74A-8396-40B5-B51B-FB3F7876765B}|meetmeatApi\\meetmeatApi.csproj|solutionrelative:meetmeatapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EDD1798-59DA-4471-BFF9-83378FB083F5}|MeetMeatApi.Tests\\MeetMeatApi.Tests.csproj|c:\\users\\pc\\projects\\meetmeatapi\\meetmeatapi\\meetmeatapi.tests\\ordercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,8 +42,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "meetmeatApi\\Services\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\DbInitializer.cs",
+              "RelativeToolTip": "meetmeatApi\\Services\\DbInitializer.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAcwNQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T19:30:46.184Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -48,14 +65,14 @@
               "RelativeDocumentMoniker": "meetmeatApi\\Program.cs",
               "ToolTip": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Program.cs",
               "RelativeToolTip": "meetmeatApi\\Program.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAcwHQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T10:09:39.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Dockerfile",
               "RelativeDocumentMoniker": "meetmeatApi\\Dockerfile",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\OrderController.cs",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OrderControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\MeetMeatApi.Tests\\OrderControllerTests.cs",
               "RelativeDocumentMoniker": "MeetMeatApi.Tests\\OrderControllerTests.cs",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\IOrderService.cs",
               "RelativeDocumentMoniker": "meetmeatApi\\Services\\IOrderService.cs",
@@ -105,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "meetmeatApi\\Services\\OrderService.cs",
@@ -117,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Projects\\meetmeatApi\\meetmeatApi\\meetmeatApi\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "meetmeatApi\\Controllers\\ProductsController.cs",
