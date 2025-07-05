@@ -1,9 +1,9 @@
-const API_URL = "https://localhost:7240/api/Auth";
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 
 // Funkce pro registraci uživatele
 const register = async (username, email, password) => {
   try {
-    const response = await fetch(`${API_URL}/register`, {
+    const response = await fetch(`${API_BASE_URL}/api/Auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const register = async (username, email, password) => {
 
 const login = async (username, password) => {
     try {
-        const response = await fetch(`${API_URL}/login`, {
+        const response = await fetch(`${API_BASE_URL}/api/Auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -49,7 +49,7 @@ const login = async (username, password) => {
                 return { success: true, message: "Přihlášení úspěšné!", data };
             } else {
                 const textData = await response.text();
-                localStorage.setItem("user", JSON.stringify({ token: textData })); // Ulož aspoň ten text jako token
+                localStorage.setItem("user", JSON.stringify({ token: textData })); 
                 return { success: true, message: textData || "Přihlášení úspěšné!" };
             }
         } else {

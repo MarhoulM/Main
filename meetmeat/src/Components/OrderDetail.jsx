@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./OrderDetail.css";
 import Loader from "./Loader";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const OrderDetail = () => {
   const { orderId } = useParams();
   const navigate = useNavigate();
@@ -45,15 +47,12 @@ const OrderDetail = () => {
           }
         }
 
-        const response = await fetch(
-          `https://localhost:7240/api/Order/${orderId}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await fetch(`${API_BASE_URL}/api/Order/${orderId}`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         if (response.ok) {
           const data = await response.json();

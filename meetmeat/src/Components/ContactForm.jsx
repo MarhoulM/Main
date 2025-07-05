@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
 
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -52,7 +54,7 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await fetch("https://localhost:7240/api/Email/send", {
+      const response = await fetch(`${API_BASE_URL}/api/Email/send`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(emailData),
