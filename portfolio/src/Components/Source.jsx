@@ -1,6 +1,6 @@
 import React from "react";
 import { projects } from "../Data/projectsData";
-import cvPdf from "../Data/CV_Michal Marhoul.pdf";
+import cvPdf from "../Data/CV_Michal_Marhoul.pdf";
 import "./Source.css";
 
 const Source = () => {

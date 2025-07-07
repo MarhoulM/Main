@@ -47,7 +47,7 @@ export const cvData = {
     ],
     tehSkills: ["Programovací jazyky: STL","konfigurace sítí a síťových prvků","čtení výkresové dokumentace","diagnostika zařízení"],
     tools: ["Siemens TIA Portal (pokročilý)","SIMATIC Step7 (základy)","Microsoft Office (pokročilý)","AutoCAD (mírně pokročilý)","Autodesk Inventor (mírně pokročilý)","Visual Studio Code(mírně pokročilý), Visual Studio(mírně pokročilý)"],
-    softSkills: ["Dohled nad projekty","Týmová práce"],
+    softSkills: ["Zodpovědnost","Spolehlivost", "Dohled nad projekty","Týmová práce"],
     languages: ["Angličtina: B2 (středně pokročilá)","Němčina: A2","Čeština: rodilý mluvčí"],
     interests: ["Turistika","Volejbal","3D tisk","Filmy","Seriály"]
 }
