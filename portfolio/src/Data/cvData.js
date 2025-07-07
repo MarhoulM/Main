@@ -45,7 +45,7 @@ export const cvData = {
             duration: "2010 – 2014"
         },
     ],
-    tehSkills: ["Programovací jazyky: C#(základy), JavaScript(základy), STL(pokročilý)","Frontend: React, Vite","IDE: Visual Studio Code (základy), Visual Studio (základy)","konfigurace sítí a síťových prvků","čtení výkresové dokumentace","diagnostika zařízení"],
+    tehSkills: ["Programovací jazyky: C#(základy), JavaScript(základy), STL(pokročilý)","Frontend: React, Vite","IDE: Visual Studio Code (základy), Visual Studio (základy)","Konfigurace sítí a síťových prvků","Čtení výkresové dokumentace","Diagnostika zařízení"],
     tools: ["Siemens TIA Portal (pokročilý)","SIMATIC Step7 (základy)","Microsoft Office (pokročilý)","AutoCAD (mírně pokročilý)","Autodesk Inventor (mírně pokročilý)","Visual Studio Code(mírně pokročilý), Visual Studio(mírně pokročilý)"],
     softSkills: ["Zodpovědnost","Spolehlivost", "Projektové řízení a dohled","Týmová práce"],
     languages: ["Angličtina: B2 (středně pokročilá)","Němčina: A2","Čeština: rodilý mluvčí"],
