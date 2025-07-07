@@ -42,7 +42,7 @@ Višňová, Česká republika");
             case "2":
                 {
                     Console.WriteLine("\x1b[4m2. Profil.\x1b[0m");
-                    Console.WriteLine("Při zprovozňování zařízení v zahraničí se jako PLC programátor často musím spolehnout hlavně na sebe a svůj úsudek. Když k tomu přidám odhodlání dotáhnout věci do konce, dostanete přesně mě.");
+                    Console.WriteLine("Jako PLC programátor jsem získal cenné zkušenosti s uváděním zařízení do provozu v mezinárodním prostředí, což vyžadovalo vysokou míru samostatnosti a schopnost řešení problémů. Nyní se zaměřuji na rozvoj v oblasti C#, JavaScriptu a Reactu, kde se snažím rozšiřovat své znalosti a hledám příležitosti pro uplatnění v moderním softwarovém vývoji.");
                     Confirmation();
                     break;
                 }
@@ -71,9 +71,9 @@ Višňová, Česká republika");
             case "5":
                 {
                     Console.WriteLine("\x1b[4m5. Dovednosti, zájmy.\x1b[0m");
-                    Console.WriteLine("Technické dovednosti:\n- Programovací jazyky: STL\n- konfigurace sítí a síťových prvků\n- Nástroje: Siemens TIA Portal (pokročilý), SIMATIC Step7 (základy), Microsoft Office (pokročilý), AutoCAD (mírně pokročilý), Autodesk Inventor (mírně pokročilý)\n\nMěkké dovednosti:\n- Dohled nad projekty\n- Týmová práce\n");
-                    Console.WriteLine("Jazyky:\n Angličtina: B2 (středně pokročilá)\nNěmčina: A2\nČeština: rodilý mluvčí\n");
-                    Console.WriteLine("Zájmy:\n- Turistika\n- Volejbal\n- 3D tisk\n- studium cizích jazyků");
+                    Console.WriteLine("Technické dovednosti:\n- Programovací jazyky: C# (základy), JavaScript (základy), STL (pokročilý)\n- Frontend: React, Vite\n- Verzovací systémy: Git\n- IDE: Visual Studio Code (základy), Visual Studio (základy)\n- konfigurace sítí a síťových prvků\n- Nástroje: Siemens TIA Portal (pokročilý), SIMATIC Step7 (základy), Microsoft Office (pokročilý), AutoCAD (mírně pokročilý), Autodesk Inventor (mírně pokročilý)\n\nMěkké dovednosti:\n- Zodpovědnost\n- Spolehlivost\n- Projektové řízení a dohled\n- Týmová práce\n");
+                    Console.WriteLine("Jazyky:\nAngličtina: B2 (středně pokročilá)\nNěmčina: A2\nČeština: rodilý mluvčí\n");
+                    Console.WriteLine("Zájmy:\n- Turistika\n- Volejbal\n- 3D tisk\n- studium cizích jazyků\n- Filmy\n- Seriály");
                     Confirmation();
                     break;
                 }
@@ -98,9 +98,9 @@ Višňová, Česká republika");
                     Console.WriteLine(@"Střední průmyslová škola a vyšší odborná škola, Příbram
                     Obor: Strojírenství počítačové, 2010 – 2014");
                     Console.WriteLine("\n\x1b[4m5. Dovednosti, zájmy.\x1b[0m");
-                    Console.WriteLine("Technické dovednosti:\n- Programovací jazyky: STL\n- konfigurace sítí a síťových prvků\n- Nástroje: Siemens TIA Portal (pokročilý), SIMATIC Step7 (základy), Microsoft Office (pokročilý), AutoCAD (mírně pokročilý), Autodesk Inventor (mírně pokročilý)\n\nMěkké dovednosti:\n- Dohled nad projekty\n- Týmová práce\n");
+                    Console.WriteLine("Technické dovednosti:\n- Programovací jazyky: C# (základy), JavaScript (základy), STL (pokročilý)\n- Frontend: React, Vite\n- Verzovací systémy: Git\n- IDE: Visual Studio Code (základy), Visual Studio (základy)\n- konfigurace sítí a síťových prvků\n- Nástroje: Siemens TIA Portal (pokročilý), SIMATIC Step7 (základy), Microsoft Office (pokročilý), AutoCAD (mírně pokročilý), Autodesk Inventor (mírně pokročilý)\n\nMěkké dovednosti:\n- Zodpovědnost\n- Spolehlivost\n- Projektové řízení a dohled\n- Týmová práce\n");
                     Console.WriteLine("Jazyky:\nAngličtina: B2 (středně pokročilá)\nNěmčina: A2\nČeština: rodilý mluvčí\n");
-                    Console.WriteLine("Zájmy:\n- Turistika\n- Volejbal\n- 3D tisk\n- studium cizích jazyků");
+                    Console.WriteLine("Zájmy:\n- Turistika\n- Volejbal\n- 3D tisk\n- studium cizích jazyků\n- Filmy\n- Seriály");
                     Confirmation();
                     break;
                 }
