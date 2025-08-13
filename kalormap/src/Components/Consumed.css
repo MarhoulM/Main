@@ -1,0 +1,36 @@
+.table-container {
+      max-width: 415px;
+      margin: 0 auto;
+      overflow-x: auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 4px 5px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    th, tr {
+      background-color: #eaf0f6;
+      font-weight: 600;
+      color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9fbfc;
+    }
+
+    tr:hover {
+      background-color: #eef5ff;
+    }
+    h3 {
+        margin: 2px 2px;
+    }

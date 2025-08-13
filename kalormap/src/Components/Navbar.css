@@ -1,0 +1,67 @@
+.navbar{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-zone{
+    justify-content: flex-start;
+}
+.middle-zone{
+    margin: 0 10px;
+    justify-content: center;
+}
+.right-zone{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+img {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.kalormap {
+  position: relative;
+  display: inline-block;
+  padding: 8px 4px;
+  background: transparent;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
+}
+
+.kalormap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  transform: skewX(-45deg);
+  z-index: -1;
+  transition: width 0.6s ease;
+}
+
+.kalormap:hover::before {
+  width: 200%;
+}
+
+.kalormap:hover {
+  color: #242424;
+}
+
+a {
+  text-decoration: none;   
+  color: inherit;          
+}
