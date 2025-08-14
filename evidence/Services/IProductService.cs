@@ -7,7 +7,7 @@ namespace Evidence.Services
     {
         Task<ProductDto> CreateProductAsync(ProductDto dto, int userId);
         Task<IEnumerable<ProductDto>> SearchProductAsync(string query);
-        Task<List<Product>> GetProductAsync(int id);
+        Task<Product> GetProductAsync(int id);
         Task<ProductDto> UpdateProductAsync(int id, ProductDto dto);
         Task<bool> DeleteProductAsync(int id);
     }

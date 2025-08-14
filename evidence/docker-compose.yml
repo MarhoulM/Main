@@ -1,0 +1,12 @@
+services:
+  kalormapapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "15129:8080"
+      - "44307:8081"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    volumes:
+      - /c/Users/PC/projects/evidence:/app

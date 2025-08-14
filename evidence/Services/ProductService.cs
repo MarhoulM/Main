@@ -18,9 +18,6 @@ namespace Evidence.Services
 
         public async Task<ProductDto> CreateProductAsync(ProductDto dto, int userId)
         {
-            var product = await _context.Products.FindAsync(dto.Id);
-            if (product == null)
-            { throw new ArgumentException("Product not found.");}
             var newProduct = new Product
             {
                 Id = dto.Id,
@@ -51,11 +48,9 @@ namespace Evidence.Services
                 Availability = newProduct.Availability
             };
         }
-        public async Task<List<Product>> GetProductAsync(int id)
+        public async Task<Product> GetProductAsync(int id)
         {
-            return await _context.Products
-                .Where(p => p.Id == id)
-                .ToListAsync();
+            return await _context.Products.FindAsync(id);
         }
         public async Task<IEnumerable<ProductDto>> SearchProductAsync(string query)
         {
