@@ -1,0 +1,6 @@
+.web-container {
+  display: flex;
+  flex-direction: column; 
+  min-height: 667px; 
+  max-width: 1000px;
+}

@@ -61,6 +61,7 @@ export const AuthProvider = ({ children }) => {
     category,
     genre,
     description,
+    borrowed,
     dateOfAcquisition,
     availability
   ) => {
@@ -88,6 +89,7 @@ export const AuthProvider = ({ children }) => {
           category,
           genre,
           description,
+          borrowed,
           dateOfAcquisition,
           availability,
         }),
@@ -120,12 +122,14 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateProduct = async (
+    id,
     name,
     author,
     director,
     category,
     genre,
     description,
+    borrowed,
     dateOfAcquisition,
     availability
   ) => {
@@ -140,7 +144,7 @@ export const AuthProvider = ({ children }) => {
     }
     try {
       const response = await fetch(
-        `${BASE_URL}/api/Product/updateProduct?userId=${userId}`,
+        `${BASE_URL}/api/Product/updateProduct?id=${id}`,
         {
           method: "PUT",
           headers: {
@@ -148,12 +152,14 @@ export const AuthProvider = ({ children }) => {
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
+            id,
             name,
             author,
             director,
             category,
             genre,
             description,
+            borrowed,
             dateOfAcquisition,
             availability,
           }),
@@ -187,7 +193,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const deleteProduct = async (productId) => {
+  const deleteProduct = async (id) => {
     const token = getToken();
     const userId = user?.id ?? user?.userId;
     console.log("Uživatel v kontextu:", user);
@@ -199,7 +205,7 @@ export const AuthProvider = ({ children }) => {
     }
     try {
       const response = await fetch(
-        `${BASE_URL}/api/Product/deleteProduct/${productId}?userId=${userId}`,
+        `${BASE_URL}/api/Product/deleteProduct?id=${id}`,
         {
           method: "DELETE",
           headers: {
@@ -212,12 +218,16 @@ export const AuthProvider = ({ children }) => {
       if (response.status === 204) {
         return {
           success: true,
-          message: "Produkt byl úspěšně aktualizován.",
+          message: "Produkt byl úspěšně smazán.",
         };
       }
       const data = await response.json().catch(() => null);
       if (!response.ok) {
-        console.error("Chyba při aktualizaci produktu:", response.status, data);
+        console.error(
+          "Chyba při odstraňování produktu:",
+          response.status,
+          data
+        );
         return {
           success: false,
           message:
@@ -227,7 +237,7 @@ export const AuthProvider = ({ children }) => {
       }
       return {
         success: true,
-        message: data.message || "Produkt aktualizován.",
+        message: data.message || "Produkt smazán.",
       };
     } catch (error) {
       console.error("Došlo k chybě při volání API:", error);

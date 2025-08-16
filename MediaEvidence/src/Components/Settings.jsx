@@ -1,4 +1,5 @@
 import PreviousBtn from "./PreviousBtn";
+import "./Settings.css";
 import { useNavigate } from "react-router-dom";
 
 const Settings = () => {
@@ -16,7 +17,8 @@ const Settings = () => {
   return (
     <>
       <div className="operations">
-        <h3>Správce evidence </h3>
+        <h2>Správce evidence </h2>
+        <p>Jakou operaci chcete provést?</p>
         <div className="add-product">
           <button className="add-button" onClick={handleAdd}>
             Přidat

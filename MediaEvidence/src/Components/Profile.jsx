@@ -34,7 +34,7 @@ const Profile = () => {
             <p>
               Již máte účet?{" "}
               <button
-                className="button"
+                className="sign-button"
                 onClick={() => setIsRegistering(false)}
               >
                 Přihlásit
@@ -46,7 +46,10 @@ const Profile = () => {
             <Login />
             <p>
               Ještě nemáte účet?{" "}
-              <button className="button" onClick={() => setIsRegistering(true)}>
+              <button
+                className="register-button"
+                onClick={() => setIsRegistering(true)}
+              >
                 Registrovat
               </button>
             </p>

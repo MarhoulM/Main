@@ -103,6 +103,7 @@ function App() {
       searchTerm: "",
       category: "",
       genre: "",
+      availability: "",
     });
   };
 
@@ -110,45 +111,56 @@ function App() {
     <>
       <AuthProvider>
         <Router>
-          <Navbar
-            onSearch={handleSearchChange}
-            searchTerm={queryParams.searchTerm}
-            onSearchSubmit={() => {}}
-            onClearSearch={handleClearFilters}
-          />
-          <FilterControl
-            queryParams={queryParams}
-            onCategoryChange={handleCategoryChange}
-            onGenreChange={handleGenreChange}
-            onAvailabilityChange={handleAvailabilityChange}
-            onClearFilters={handleClearFilters}
-          />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="content-container">
-                  {loading && <p>Načítám produkty...</p>}
-                  {error && <p className="error">Chyba: {error}</p>}
-                  <Content products={products} />
-                </div>
-              }
+          <div className="web-container">
+            <Navbar
+              onSearch={handleSearchChange}
+              searchTerm={queryParams.searchTerm}
+              onSearchSubmit={() => {}}
+              onClearSearch={handleClearFilters}
             />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/add" element={<CreateProduct />} />
-            <Route path="/update" element={<UpdateProduct />} />
-            <Route path="/delete" element={<DeleteProduct />} />
-            <Route
-              path="*"
-              element={
-                <div style={{ padding: "50px", textAlign: "center" }}>
-                  <h2>Stránka nenalezena (404)</h2>
-                  <p>Omlouváme se, tato stránka neexistuje.</p>
-                </div>
-              }
+            <FilterControl
+              queryParams={queryParams}
+              onCategoryChange={handleCategoryChange}
+              onGenreChange={handleGenreChange}
+              onAvailabilityChange={handleAvailabilityChange}
+              onClearFilters={handleClearFilters}
             />
-          </Routes>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <div className="content-container">
+                    {loading && <p>Načítám produkty...</p>}
+                    {error && <p className="error">Chyba: {error}</p>}
+                    <Content products={products} />
+                  </div>
+                }
+              />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route
+                path="/add"
+                element={<CreateProduct onRefresh={fetchProducts} />}
+              />
+              <Route
+                path="/update"
+                element={<UpdateProduct onRefresh={fetchProducts} />}
+              />
+              <Route
+                path="/delete"
+                element={<DeleteProduct onRefresh={fetchProducts} />}
+              />
+              <Route
+                path="*"
+                element={
+                  <div style={{ padding: "50px", textAlign: "center" }}>
+                    <h2>Stránka nenalezena (404)</h2>
+                    <p>Omlouváme se, tato stránka neexistuje.</p>
+                  </div>
+                }
+              />
+            </Routes>
+          </div>
         </Router>
       </AuthProvider>
     </>

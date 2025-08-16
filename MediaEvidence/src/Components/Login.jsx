@@ -75,7 +75,7 @@ const Login = () => {
           {errors.password && <p className="error-text">{errors.password}</p>}
         </div>
 
-        <button type="submit" disabled={loading} className="button">
+        <button type="submit" disabled={loading} className="sign-button">
           {loading ? "Přihlašuji se..." : "Přihlásit se"}
         </button>
 

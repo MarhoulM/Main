@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./PreviousBtn.css";
 
 const PreviousBtn = () => {
   const navigate = useNavigate();
@@ -7,7 +8,7 @@ const PreviousBtn = () => {
   };
   return (
     <>
-      <button className="button" onClick={handlePreviousClick}>
+      <button className="previous-button" onClick={handlePreviousClick}>
         Zpět
       </button>
     </>

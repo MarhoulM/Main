@@ -20,19 +20,26 @@ const Content = ({ products }) => {
         {products.map((item) => (
           <div key={item.id} className="product-card">
             <div className="product-content">
-              <h2 className="name">{item.name}</h2>
+              <h2 className="name">{item.name}</h2>{" "}
+              <div className="id">ID: {item.id}</div>
               {isBookType(item.category) ? (
-                <span className="author">{item.author}</span>
+                <span className="author">Autor: {item.author}</span>
               ) : (
-                <span className="director">{item.director}</span>
+                <span className="director">Režisér: {item.director}</span>
               )}
               <div className="groups">
                 <span className="category">{item.category}</span>
-                <span className="genre">{item.genre}</span>
-                <span className="description">{item.description}</span>
-                <span className="doa">{item.dateOfAcquisition}</span>
-                <span className="availability">{item.availability}</span>
-                <span className="borrowed">{item.borrowed}</span>
+                <span className="genre"> {item.genre}</span>
+                <span className="description"> - {item.description}</span>
+                <div className="doa">
+                  Přidáno dne:{" "}
+                  {new Date(item.dateOfAcquisition).toLocaleDateString()}
+                </div>
+                <span className={item.availability ? "available" : "borrowed"}>
+                  {item.availability
+                    ? "Dostupné"
+                    : `Zapůjčeno: ${item.borrowed}`}
+                </span>
               </div>
             </div>
           </div>

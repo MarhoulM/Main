@@ -1,2 +1,27 @@
+h2{
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+.product-card{
+    border-radius: 8px;
+}
+.available{
+    background-color: green;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 2px;
+}
 
+.borrowed{
+    background-color: red;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 2px;
+
+}
+@media (max-width: 600px) {
+  .product-card {
+   margin-left: 4px;
+  }
+}
 

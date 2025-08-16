@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import profile from "../Svg/Profile.svg";
 import db from "../Svg/Db.svg";
+import mevidence from "../Svg/MEvidence.svg";
+
+const HomeIcon = () => {
+  return <img src={mevidence} alt="Media Evidence" />;
+};
 
 const ProfileIcon = () => {
   return <img src={profile} alt="Profil" />;
@@ -35,14 +40,14 @@ const Navbar = ({ onSearch, searchTerm, onSearchSubmit, onClearSearch }) => {
     <>
       <div className="navbar">
         <div className="left-zone">
-          <div className="evidence">
+          <div className="nav-icon">
             <a
               href="#"
               onClick={() => {
                 navigate("/");
               }}
             >
-              Media Evidence
+              <HomeIcon />
             </a>
           </div>
         </div>
@@ -56,12 +61,12 @@ const Navbar = ({ onSearch, searchTerm, onSearchSubmit, onClearSearch }) => {
             id="searchInput"
             name="searchTerm"
           />
-          <button className="search-btn" onClick={handleSearchBtnClick}>
+          <button className="search-button" onClick={handleSearchBtnClick}>
             Hledat
           </button>
         </div>
         <div className="right-zone">
-          <div className="profile">
+          <div className="nav-icon">
             <a
               href="#"
               onClick={() => {
@@ -72,7 +77,7 @@ const Navbar = ({ onSearch, searchTerm, onSearchSubmit, onClearSearch }) => {
             </a>
           </div>
           {isAuthenticated ? (
-            <div className="settings">
+            <div className="nav-icon">
               {" "}
               <a
                 href="#"
