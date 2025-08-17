@@ -11,6 +11,9 @@ const Settings = () => {
   const handleUpdate = () => {
     navigate("/update");
   };
+  const handlePatch = () => {
+    navigate("/patch");
+  };
   const handleDelete = () => {
     navigate("/delete");
   };
@@ -26,7 +29,12 @@ const Settings = () => {
         </div>
         <div className="update-product">
           <button className="update-button" onClick={handleUpdate}>
-            Upravit
+            Upravit produkt
+          </button>
+        </div>
+        <div className="patch-product">
+          <button className="patch-button" onClick={handlePatch}>
+            Změnit dostupnost a zapůjčení
           </button>
         </div>
         <div className="delete-product">

@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: sticky;
+    top: 62px;
+    background-color: var(--bg-color2);
 }
 
 .filter-group{
@@ -30,5 +33,8 @@ select{
 }
 .filter-group{
     margin: 0 1px;
+}
+.filter-container{
+    top: 54px;
 }
 }

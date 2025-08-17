@@ -10,6 +10,7 @@ import "./App.css";
 import CreateProduct from "./Components/CreateProduct";
 import UpdateProduct from "./Components/UpdateProduct";
 import DeleteProduct from "./Components/DeleteProduct";
+import PatchProduct from "./Components/PatchProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -118,13 +119,6 @@ function App() {
               onSearchSubmit={() => {}}
               onClearSearch={handleClearFilters}
             />
-            <FilterControl
-              queryParams={queryParams}
-              onCategoryChange={handleCategoryChange}
-              onGenreChange={handleGenreChange}
-              onAvailabilityChange={handleAvailabilityChange}
-              onClearFilters={handleClearFilters}
-            />
             <Routes>
               <Route
                 path="/"
@@ -132,6 +126,13 @@ function App() {
                   <div className="content-container">
                     {loading && <p>Načítám produkty...</p>}
                     {error && <p className="error">Chyba: {error}</p>}
+                    <FilterControl
+                      queryParams={queryParams}
+                      onCategoryChange={handleCategoryChange}
+                      onGenreChange={handleGenreChange}
+                      onAvailabilityChange={handleAvailabilityChange}
+                      onClearFilters={handleClearFilters}
+                    />
                     <Content products={products} />
                   </div>
                 }
@@ -145,6 +146,10 @@ function App() {
               <Route
                 path="/update"
                 element={<UpdateProduct onRefresh={fetchProducts} />}
+              />
+              <Route
+                path="/patch"
+                element={<PatchProduct onRefresh={fetchProducts} />}
               />
               <Route
                 path="/delete"

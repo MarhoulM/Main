@@ -192,6 +192,60 @@ export const AuthProvider = ({ children }) => {
       return { success: false, message: "Došlo k chybě při komunikaci s API." };
     }
   };
+  //PATCH
+  const patchProduct = async (id, borrowed, availability) => {
+    const token = getToken();
+    const userId = user?.id ?? user?.userId;
+    console.log("Uživatel v kontextu:", user);
+    if (!token) {
+      return { success: false, message: "Chybí token. Přihlaste se znovu." };
+    }
+    if (!userId) {
+      return { success: false, message: "Chybí userId uživatele." };
+    }
+    try {
+      const response = await fetch(
+        `${BASE_URL}/api/Product/patchProduct?id=${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            id,
+            borrowed,
+            availability,
+          }),
+        }
+      );
+      const data = await response.json().catch(() => null);
+      console.log("Odpověď z API při aktualizaci produktu:", data);
+      console.log("HTTP status:", response.status);
+      if (!response.ok) {
+        console.error("Chyba při aktualizaci produktu:", response.status, data);
+        return {
+          success: false,
+          message:
+            data?.message || `Server vrátil chybu (status ${response.status}).`,
+          errors: data?.errors || null,
+        };
+      }
+      if (response.status === 204) {
+        return {
+          success: true,
+          message: "Produkt byl úspěšně aktualizován.",
+        };
+      }
+      return {
+        success: true,
+        message: data.message || "Produkt aktualizován.",
+      };
+    } catch (error) {
+      console.error("Došlo k chybě při volání API:", error);
+      return { success: false, message: "Došlo k chybě při komunikaci s API." };
+    }
+  };
 
   const deleteProduct = async (id) => {
     const token = getToken();
@@ -254,6 +308,7 @@ export const AuthProvider = ({ children }) => {
     logout,
     getToken,
     updateProduct,
+    patchProduct,
     createProduct,
     deleteProduct,
   };

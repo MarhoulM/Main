@@ -3,6 +3,9 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color2);
 }
 .left-zone{
     justify-content: flex-start;
@@ -17,6 +20,7 @@
 .search-input{
   width: 140px ;
   height: 25px;
+  border-radius: 4px;
 }
 .search-button{
   display: flex;
