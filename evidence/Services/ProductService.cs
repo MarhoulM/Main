@@ -27,6 +27,7 @@ namespace Evidence.Services
                 Category = dto.Category,
                 Genre = dto.Genre,
                 Description = dto.Description,
+                Borrowed = dto.Borrowed,
                 DateOfAcquisition = dto.DateOfAcquisition,
                 Availability = dto.Availability
             };
@@ -44,6 +45,7 @@ namespace Evidence.Services
                 Category = newProduct.Category,
                 Genre = newProduct.Genre,
                 Description = newProduct.Description,
+                Borrowed = newProduct.Borrowed,
                 DateOfAcquisition = newProduct.DateOfAcquisition,
                 Availability = newProduct.Availability
             };
@@ -71,6 +73,26 @@ namespace Evidence.Services
                     Director = p.Director!,
                     Genre = p.Genre,
                     Description = p.Description!,
+                    Borrowed = p.Borrowed!,
+                    DateOfAcquisition = p.DateOfAcquisition,
+                    Availability = p.Availability
+                })
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
+        {
+            return await _context.Products
+                .OrderBy(p => p.Name)
+                .Select(p => new ProductDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Author = p.Author!,
+                    Director = p.Director!,
+                    Category = p.Category,
+                    Genre = p.Genre,
+                    Description = p.Description!,
+                    Borrowed = p.Borrowed!,
                     DateOfAcquisition = p.DateOfAcquisition,
                     Availability = p.Availability
                 })
@@ -99,6 +121,7 @@ namespace Evidence.Services
             existingProduct.Category = dto.Category;
             existingProduct.Genre = dto.Genre;
             existingProduct.Description = dto.Description;
+            existingProduct.Borrowed = dto.Borrowed;
             existingProduct.DateOfAcquisition = dto.DateOfAcquisition;
             existingProduct.Availability = dto.Availability;
 
@@ -113,7 +136,39 @@ namespace Evidence.Services
                 Category = existingProduct.Category,
                 Genre = existingProduct.Genre,
                 Description = existingProduct.Description,
+                Borrowed = existingProduct.Borrowed,
                 DateOfAcquisition = existingProduct.DateOfAcquisition,
+                Availability = existingProduct.Availability
+            };
+        }
+
+        //PATCH
+        public async Task<PatchProductDto> PatchProductAsync(int id, PatchProductDto dto)
+        {
+            _logger.LogInformation($"Searching for Product ID: {id}");
+            if (id <= 0)
+            {
+                _logger.LogWarning($"Invalid ID: {id}");
+                return null;
+            }
+
+            var existingProduct = await _context.Products.FindAsync(id);
+
+            if (existingProduct == null)
+            {
+                _logger.LogWarning($"ID: {id} has no Product");
+                return null;
+            }
+            //existingProduct.Id = dto.Id;
+            existingProduct.Borrowed = dto.Borrowed;
+            existingProduct.Availability = dto.Availability;
+
+            await _context.SaveChangesAsync();
+
+            _logger.LogInformation($"Product updated for ID: {id}.");
+            return new PatchProductDto
+            {
+                Borrowed = existingProduct.Borrowed,
                 Availability = existingProduct.Availability
             };
         }

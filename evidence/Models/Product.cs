@@ -17,7 +17,7 @@ namespace Evidence.Models
         [StringLength(100)]
         public required string Genre { get; set; }
         public string? Description { get; set; }
-
+        public string? Borrowed { get; set; }
         public DateTime DateOfAcquisition { get; set; }
         public bool Availability { get; set; }
 

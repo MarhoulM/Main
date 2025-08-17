@@ -100,10 +100,60 @@ namespace Evidence.Controllers
                 Category = product.Category,
                 Genre = product.Genre,
                 Description = product.Description,
+                Borrowed = product.Borrowed,
                 DateOfAcquisition = product.DateOfAcquisition,
                 Availability = product.Availability
             };
             return Ok(productDto);
+        }
+        [AllowAnonymous]
+        [HttpGet("searchProduct")]
+        public async Task<ActionResult<IEnumerable<ProductDto>>> SearchProductAsync([FromQuery] string? query, [FromQuery] string? category, [FromQuery] string? genre, [FromQuery] string? availability)
+        {
+            var productsQuery = _context.Products.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                productsQuery = productsQuery.Where(p =>
+                   EF.Functions.Like(p.Name, $"%{query}%") ||
+                   EF.Functions.Like(p.Author, $"%{query}%") ||
+                   EF.Functions.Like(p.Director, $"%{query}%") ||
+                   EF.Functions.Like(p.Description, $"%{query}%"));
+            }
+            if (!string.IsNullOrWhiteSpace(category))
+            {
+                productsQuery = productsQuery.Where(p => p.Category == category);
+            }
+
+            if (!string.IsNullOrWhiteSpace(genre))
+            {
+                productsQuery = productsQuery.Where(p => EF.Functions.Like(p.Genre, $"%{genre}%"));
+            }
+
+            if (!string.IsNullOrWhiteSpace(availability))
+            {
+                bool isAvailable = availability == "Dostupné";
+                productsQuery = productsQuery.Where(p => p.Availability == isAvailable);
+            }
+
+            var products = await productsQuery
+               .OrderBy(p => p.Name)
+               .Select(p => new ProductDto
+               {
+                   Id = p.Id,
+                   Name = p.Name,
+                   Author = p.Author,
+                   Director = p.Director,
+                   Category = p.Category,
+                   Genre = p.Genre,
+                   Description = p.Description,
+                   Borrowed = p.Borrowed,
+                   DateOfAcquisition = p.DateOfAcquisition,
+                   Availability = p.Availability
+               })
+               .ToListAsync();
+
+            return Ok(new { data = products });
         }
         [Authorize]
         [HttpPut("updateProduct")]
@@ -141,7 +191,54 @@ namespace Evidence.Controllers
             if(dto.Category != null) product.Category = dto.Category;
             if(dto.Genre != null) product.Genre = dto.Genre;
             product.Description = dto.Description;
+            product.Borrowed = dto.Borrowed;
             product.DateOfAcquisition = dto.DateOfAcquisition;
+            product.Availability = dto.Availability;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Chyba při ukládání produktu pro ID: {id}");
+                return StatusCode(500, new { Message = "Nepodařilo se aktualizovat produkt." });
+            }
+            return Ok(product);
+        }
+        //PATCH
+        [Authorize]
+        [HttpPatch("patchProduct")]
+        public async Task<ActionResult<PatchProductDto>> PatchProductAsync(int id, [FromBody] PatchProductDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("Product validation failed from frontend request.");
+                return BadRequest(ModelState);
+            }
+
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null || !int.TryParse(userIdClaim.Value, out int parsedUserId))
+            {
+                _logger.LogWarning("Authenticated user's token is missing or has an invalid UserId claim.");
+                return Unauthorized(new { Message = "Neplatný nebo chybějící identifikátor uživatele." });
+            }
+
+            var user = await _context.Users.FindAsync(parsedUserId);
+            if (user == null || !user.Admin)
+            {
+                _logger.LogWarning($"Uživatel s ID {parsedUserId} nemá práva pro aktualizaci produktu.");
+                return Unauthorized(new { Message = "Uživatel nemá dostatečná práva pro aktualizaci produktu." });
+            }
+            var product = await _context.Products.FindAsync(id);
+
+            if (product == null)
+            {
+                _logger.LogWarning($"Product for ID: {id} was not found.");
+                return NotFound($"Produkt ID: {id} nebyl nalezen.");
+            }
+     
+            product.Borrowed = dto.Borrowed;
             product.Availability = dto.Availability;
 
             try

@@ -36,6 +36,9 @@ namespace Evidence.Migrations
                     b.Property<bool>("Availability")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("Borrowed")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasMaxLength(100)
