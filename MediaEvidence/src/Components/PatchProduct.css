@@ -1,0 +1,15 @@
+.patch-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patch-form{
+    display: flex;
+    flex-direction: column;
+}
+
+[class^="product-"]{
+    display: flex;
+    flex-direction: column;
+}
