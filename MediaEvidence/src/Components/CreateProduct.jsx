@@ -6,6 +6,7 @@ const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 
 const CreateProduct = ({ onRefresh }) => {
   const { createProduct } = useAuth();
+  const [apiResult, setApiResult] = useState(null);
 
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
@@ -35,6 +36,7 @@ const CreateProduct = ({ onRefresh }) => {
       dateOfAcquisition,
       availability
     );
+    setApiResult(response);
     setMessage(response.message);
     setLoading(false);
 
@@ -155,7 +157,15 @@ const CreateProduct = ({ onRefresh }) => {
             {loading ? "Odesílám..." : "Vytvořit"}
           </button>
           {errors.name && <p className="error">{errors.name}</p>}
-          {message && <p className="message">{message}</p>}
+          {message && (
+            <p
+              className={`form-message ${
+                apiResult?.success ? "success" : "error"
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </form>
         <PreviousBtn />
       </div>

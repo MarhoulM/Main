@@ -17,6 +17,7 @@ const UpdateProduct = ({ onRefresh }) => {
   const [borrowed, setBorrowed] = useState("");
   const [dateOfAcquisition, setDateOfAcquisition] = useState("2025-01-01");
   const [availability, setAvailability] = useState(false);
+  const [apiResult, setApiResult] = useState(null);
 
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
@@ -37,6 +38,7 @@ const UpdateProduct = ({ onRefresh }) => {
       dateOfAcquisition,
       availability
     );
+    setApiResult(response);
     setMessage(response.message);
     setLoading(false);
 
@@ -168,7 +170,15 @@ const UpdateProduct = ({ onRefresh }) => {
             {loading ? "Odesílám..." : "Upravit"}
           </button>
           {errors.name && <p className="error">{errors.name}</p>}
-          {message && <p className="message">{message}</p>}
+          {message && (
+            <p
+              className={`form-message ${
+                apiResult?.success ? "success" : "error"
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </form>
         <PreviousBtn />
       </div>

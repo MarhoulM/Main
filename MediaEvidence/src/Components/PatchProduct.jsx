@@ -10,6 +10,7 @@ const PatchProduct = ({ onRefresh }) => {
   const [id, setId] = useState("");
   const [borrowed, setBorrowed] = useState("");
   const [availability, setAvailability] = useState(false);
+  const [apiResult, setApiResult] = useState(null);
 
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
@@ -19,6 +20,7 @@ const PatchProduct = ({ onRefresh }) => {
     e.preventDefault();
     setLoading(true);
     const response = await patchProduct(id, borrowed, availability);
+    setApiResult(response);
     setMessage(response.message);
     setLoading(false);
 
@@ -74,7 +76,15 @@ const PatchProduct = ({ onRefresh }) => {
             {loading ? "Odesílám..." : "Upravit"}
           </button>
           {errors.name && <p className="error">{errors.name}</p>}
-          {message && <p className="message">{message}</p>}
+          {message && (
+            <p
+              className={`form-message ${
+                apiResult?.success ? "success" : "error"
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </form>
         <PreviousBtn />
       </div>

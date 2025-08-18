@@ -7,6 +7,7 @@ const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 const DeleteProduct = ({ onRefresh }) => {
   const { deleteProduct } = useAuth();
   const [id, setId] = useState("");
+  const [apiResult, setApiResult] = useState(null);
 
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
@@ -16,6 +17,7 @@ const DeleteProduct = ({ onRefresh }) => {
     e.preventDefault();
     setLoading(true);
     const response = await deleteProduct(id);
+    setApiResult(response);
     setMessage(response.message);
     setLoading(false);
 
@@ -47,7 +49,15 @@ const DeleteProduct = ({ onRefresh }) => {
             {loading ? "Odesílám..." : "Smazat"}
           </button>
           {errors.name && <p className="error">{errors.name}</p>}
-          {message && <p className="message">{message}</p>}
+          {message && (
+            <p
+              className={`form-message ${
+                apiResult?.success ? "success" : "error"
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </form>
         <PreviousBtn />
       </div>
