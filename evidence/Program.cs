@@ -84,7 +84,7 @@ public class Program {
             });
         });
 
-        var frontendUrl = builder.Configuration["Cors:FrontendUrl"] ?? "https://mediaevidence.onrender.com/";  //VITEhttp://localhost:5173
+        var frontendUrl = builder.Configuration["Cors:FrontendUrl"] ?? "https://mediaevidence.onrender.com";  //VITEhttp://localhost:5173
 
         builder.Services.AddCors(options =>
         {
