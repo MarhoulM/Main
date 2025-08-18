@@ -4,4 +4,5 @@
   justify-content: flex-start;
   min-height: 667px; 
   max-width: 1000px;
+  box-sizing: border-box;
 }
